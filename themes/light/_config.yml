@@ -1,0 +1,42 @@
+menu:
+  Home: /
+  Archives: /archives
+  Front-End: /categories/Front-End
+  Nodejs: /categories/Nodejs
+  Note: /categories/Note
+  Other: /categories/Other
+
+
+widgets:
+- search
+- category
+- recent_posts
+- tagcloud
+
+excerpt_link: Read More
+
+twitter:
+  username:
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+google_analytics:
+rss: /atom.xml
+
+comment_provider: facebook
+# Facebook comment
+facebook:
+  appid: 123456789012345
+  comment_count: 5
+  comment_width: 840
+  comment_colorscheme: light
