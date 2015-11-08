@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello Hexo ! | ZY.I.TW</title>
+  <title>Mac OS X 下开启 root 用户 | ZY.I.TW</title>
   <meta name="author" content="yoonge">
   
   <meta name="description" content="Front-End, NodeJS, Web, Html5, CSS3, React, JQuery, iOS, Android, 前端开发，移动端开发">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Hello Hexo !"/>
+  <meta property="og:title" content="Mac OS X 下开启 root 用户"/>
   <meta property="og:site_name" content="ZY.I.TW"/>
 
   
@@ -58,26 +58,23 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2012-12-22T04:12:22.000Z"><a href="/2012/12/22/hello-hexo/">2012-12-22</a></time>
+        <time datetime="2015-04-03T02:39:38.000Z"><a href="/2015/04/03/mac-os-x-root/">2015-04-03</a></time>
       
       
   
-    <h1 class="title">Hello Hexo !</h1>
+    <h1 class="title">Mac OS X 下开启 root 用户</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
+<p>提示失败，试试 sudo ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+<p>好了，这时再用 su ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">appletekiMacBook-Air:~ apple$ su</span><br><span class="line">Password:</span><br><span class="line">sh-<span class="number">3.2</span><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p>搞定。使用 root 完毕，用 exit 退出即可。</p>
 
       
     </div>
@@ -86,13 +83,13 @@
         
   
   <div class="categories">
-    <a href="/categories/Other/">Other</a>
+    <a href="/categories/Note/">Note</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/hexo/">hexo</a>
+    <a href="/tags/mac/">mac</a>, <a href="/tags/os-x/">os x</a>
   </div>
 
         
@@ -135,7 +132,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://zyi.tw/2012/12/22/hello-hexo/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://zyi.tw/2015/04/03/mac-os-x-root/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
