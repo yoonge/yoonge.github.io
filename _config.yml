@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Yoonge
-subtitle: Yoonge's Blog
-description: 人生如一杯茶，不能苦一辈子，但总要苦一阵子！
+title: ZY.I.TW
+subtitle: 时光静好，与君语；细水流年，与君同；繁华落尽，与君老。
+description: Front-End, NodeJS, Web, Html5, CSS3, React, JQuery, iOS, Android, 前端开发，移动端开发
 author: yoonge
 language: zh-CN
 timezone:
@@ -63,7 +63,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
+theme: light
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
