@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zyi.tw/2014/01/03/mac-os-x-root/</loc>
+    <lastmod>2015-11-09T14:12:53.918Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zyi.tw/404.html</loc>
-    <lastmod>2015-11-09T13:53:41.281Z</lastmod>
+    <lastmod>2015-11-09T14:10:55.073Z</lastmod>
   </url>
   
   <url>
@@ -23,11 +28,6 @@
   
   <url>
     <loc>http://zyi.tw/2015/03/07/nodejs-update/</loc>
-    <lastmod>2015-11-09T12:51:54.435Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2013/01/03/mac-os-x-root/</loc>
     <lastmod>2015-11-09T12:51:54.435Z</lastmod>
   </url>
   
