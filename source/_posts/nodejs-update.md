@@ -9,8 +9,6 @@ categories: Nodejs
 npm update –g
 ```
 
-<!--more-->
-
 更新 nodejs 自身（非 windows ）
 
 ``` bash

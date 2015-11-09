@@ -3,12 +3,10 @@ date: 2013-01-03 10:39:38
 tags:
 - mac
 - os x
-categories: Note
+categories: Notes
 ---
 在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。
 这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:
-
-<!--more-->
 
 ``` bash
 passwd root
@@ -19,6 +17,8 @@ New Password:
 Retype New Password:
 passwd: authentication token failure
 ```
+
+<!--more-->
 
 提示失败，试试 sudo ：
 
