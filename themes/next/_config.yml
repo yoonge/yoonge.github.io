@@ -27,12 +27,12 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  #categories: /categories
-  archives: /archives
+  categories: /categories
+  Front-End: /categories/Front-End
+  Nodejs: /categories/Nodejs
+  Notes: /categories/Notes
   tags: /tags
-  front-end: /categories/front-end
-  nodejs: /categories/nodejs
-  notes: /categories/notes
+  archives: /archives
   #about: /about
   #commonweal: /404.html
 
@@ -47,11 +47,11 @@ menu_icons:
   # Icon Mapping.
   home: home
   categories: th
-  archives: archive
-  tags: tags
   front-end: facebook
   nodejs: fire
   notes: edit
+  tags: tags
+  archives: archive
   about: user
   commonweal: heartbeat
 

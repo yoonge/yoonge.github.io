@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ZY & TW
+title: zy.i.tw
 subtitle: 时光静好，与君语；细水流年，与君同；繁华落尽，与君老。
 description: HTML5, CSS3, JQuery, NodeJS, React Native
 author: Yoonge
@@ -74,3 +74,10 @@ deploy:
   type: git
   repository: https://github.com/yoonge/yoonge.github.io.git
   branch: master
+
+# Baidu Analytics
+## http://tongji.baidu.com
+baidu_analytics: 23c2226d9da02df3144638200c5d8f75
+
+# @ 2013 - 2015
+since: 2013
