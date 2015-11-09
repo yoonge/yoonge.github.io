@@ -719,12 +719,12 @@ body {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: normal;
 }
 .site-subtitle {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
 }
 .use-motion .brand {
@@ -961,7 +961,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6b47b0;
+  background: #6fffff;
 }
 .sidebar-nav {
   margin: 0 0 20px;
