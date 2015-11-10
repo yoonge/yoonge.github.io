@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Place your favicon.ico to /source directory.
-favicon: /favicon.ico
+favicon: /favicon.png
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -11,10 +11,10 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2013
 
 
 
@@ -27,14 +27,19 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  categories: /categories
+  #categories: /categories
   Front-End: /categories/Front-End
   Nodejs: /categories/Nodejs
   Notes: /categories/Notes
-  tags: /tags
+  #tags: /tags
   archives: /archives
   #about: /about
   #commonweal: /404.html
+
+state:
+  posts: /archives
+  categories: /categories
+  tags: /tags
 
 
 # Enable/Disable menu icons.
@@ -142,7 +147,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night blue
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
@@ -166,10 +171,10 @@ mathjax:
 
 
 # Swiftype Search API Key
-#swiftype_key:
+swiftype_key: qvHttZ3d-c61Spts1s3U
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 23c2226d9da02df3144638200c5d8f75
 
 # Duoshuo ShortName
 duoshuo_shortname: zyitw
