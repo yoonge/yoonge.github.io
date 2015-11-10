@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[ZY & TW]]></title>
+  <title><![CDATA[zy.i.tw]]></title>
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
@@ -39,10 +39,10 @@
   
   <entry>
     <title><![CDATA[Mac OS X 下开启 root 用户]]></title>
-    <link href="http://zyi.tw/2013/01/03/mac-os-x-root/"/>
-    <id>http://zyi.tw/2013/01/03/mac-os-x-root/</id>
-    <published>2013-01-03T02:39:38.000Z</published>
-    <updated>2015-11-09T09:37:16.487Z</updated>
+    <link href="http://zyi.tw/2014/01/03/mac-os-x-root/"/>
+    <id>http://zyi.tw/2014/01/03/mac-os-x-root/</id>
+    <published>2014-01-03T02:39:38.000Z</published>
+    <updated>2015-11-10T03:04:56.239Z</updated>
     <content type="html"><![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -68,10 +68,10 @@
   
   <entry>
     <title><![CDATA[Hello Hexo !]]></title>
-    <link href="http://zyi.tw/2012/12/22/hello-hexo/"/>
-    <id>http://zyi.tw/2012/12/22/hello-hexo/</id>
-    <published>2012-12-22T04:12:22.000Z</published>
-    <updated>2015-11-09T09:37:37.747Z</updated>
+    <link href="http://zyi.tw/2013/12/22/hello-hexo/"/>
+    <id>http://zyi.tw/2013/12/22/hello-hexo/</id>
+    <published>2013-12-22T04:12:22.000Z</published>
+    <updated>2015-11-10T03:04:56.238Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
