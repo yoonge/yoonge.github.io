@@ -724,6 +724,8 @@ body {
 }
 .site-subtitle {
   margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 15px;
   color: #999;
 }
@@ -961,7 +963,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e5f;
+  background: #61ffac;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -1346,7 +1348,7 @@ body {
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 160px auto 120px;
+  margin: 120px auto 80px;
   width: 8%;
   height: 1px;
   background: #ccc;
