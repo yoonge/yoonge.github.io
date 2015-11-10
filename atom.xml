@@ -4,7 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-  <updated>2015-11-10T05:44:53.211Z</updated>
+  <updated>2015-11-10T06:19:51.485Z</updated>
   <id>http://zyi.tw/</id>
   
   <author>
@@ -19,11 +19,11 @@
     <link href="http://zyi.tw/2015/03/07/nodejs-update/"/>
     <id>http://zyi.tw/2015/03/07/nodejs-update/</id>
     <published>2015-03-07T04:04:21.000Z</published>
-    <updated>2015-11-10T05:44:53.211Z</updated>
+    <updated>2015-11-10T06:19:51.485Z</updated>
     <content type="html"><![CDATA[<p>更新已经安装的 npm 库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update –g</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm update –g</span><br></pre></td></tr></table></figure>
 <p>更新 Nodejs 自身（非 windows ）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install –g n</span><br><span class="line">n stable</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install –g n</span><br><span class="line">$ n stable</span><br></pre></td></tr></table></figure>
 <p>注：n 为 Nodejs 版本管理模块。</p>
 ]]></content>
     <summary type="html">
