@@ -48,26 +48,26 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=0.4.5.2" />
 
 
 
 
 
 
-<meta name="description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:
-1234567passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd: a">
+<meta name="description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
+1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac OS X 下开启 root 用户">
 <meta property="og:url" content="http://zyi.tw/2014/01/03/mac-os-x-root/index.html">
 <meta property="og:site_name" content="zy.i.tw">
-<meta property="og:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:
-1234567passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd: a">
-<meta property="og:updated_time" content="2015-11-09T14:12:53.918Z">
+<meta property="og:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
+1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta property="og:updated_time" content="2015-11-10T12:31:58.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac OS X 下开启 root 用户">
-<meta name="twitter:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:
-1234567passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd: a">
+<meta name="twitter:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
+1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
 
 
 
@@ -139,7 +139,7 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu menu-left">
       
         
         <li class="menu-item menu-item-home">
@@ -148,16 +148,6 @@
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
             Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
-            Categories
           </a>
         </li>
       
@@ -192,16 +182,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -214,9 +194,35 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            
+              <i class="menu-item-icon fa fa-search icon-next-search"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'qvHttZ3d-c61Spts1s3U','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -304,14 +310,14 @@
       
 
       
-        <span itemprop="articleBody"><p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>提示失败，试试 sudo ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
 <p>好了，这时再用 su ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">appletekiMacBook-Air:~ apple$ su</span><br><span class="line">Password:</span><br><span class="line">sh-<span class="number">3.2</span><span class="comment">#</span></span><br></pre></td></tr></table></figure>
-<p>搞定。使用 root 完毕，用 exit 退出即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">w4rlock@MacBook-Pro:~$ su</span><br><span class="line">Password:</span><br><span class="line">sh-<span class="number">3.2</span><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
 </span>
       
     </div>
@@ -339,8 +345,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/03/07/nodejs-update/" rel="prev" title="Nodejs Update">
-                Nodejs Update <i class="fa fa-chevron-right"></i>
+              <a href="/2014/09/19/json-traversal/" rel="prev" title="JSON 遍历">
+                JSON 遍历 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -428,26 +434,26 @@
           <img class="site-author-image" src="/images/avatar.jpg" alt="Yoonge" itemprop="image"/>
           <p class="site-author-name" itemprop="name">Yoonge</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">HTML5, CSS3, JQuery, NodeJS, React Native</p>
+        <p class="site-description motion-element" itemprop="description">Front-End, NodeJS, React Native</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">Posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">categories</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">Categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">tags</span>
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">Tags</span>
               </a>
           </div>
 
