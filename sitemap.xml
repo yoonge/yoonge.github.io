@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zyi.tw/2013/12/22/hello-hexo/</loc>
+    <lastmod>2015-11-10T08:12:41.956Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zyi.tw/2015/03/07/nodejs-update/</loc>
     <lastmod>2015-11-10T06:19:51.485Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://zyi.tw/categories/index.html</loc>
     <lastmod>2015-11-10T03:04:56.239Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2013/12/22/hello-hexo/</loc>
-    <lastmod>2015-11-10T03:04:56.238Z</lastmod>
   </url>
   
   <url>
