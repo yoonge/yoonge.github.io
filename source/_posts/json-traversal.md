@@ -22,9 +22,9 @@ for ( key in filterArray ) {
 }
 ```
 
-<!--more-->
-
 ## each
+
+<!--more-->
 
 ``` javascript
 var anObject = {one : 1, two : 2, three : 3};    // 对 json 数组 each

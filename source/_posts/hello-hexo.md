@@ -15,9 +15,9 @@ $ hexo new "My New Post"
 
 More info: [Writing](http://hexo.io/docs/writing.html)
 
-<!--more-->
-
 ### Run server
+
+<!--more-->
 
 ``` bash
 $ hexo server

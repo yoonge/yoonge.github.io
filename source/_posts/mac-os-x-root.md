@@ -18,9 +18,9 @@ Retype New Password:
 passwd: authentication token failure
 ```
 
-<!--more-->
-
 提示失败，试试 sudo ：
+
+<!--more-->
 
 ``` bash
 $ sudo passwd root
@@ -29,9 +29,8 @@ $ sudo passwd root
 好了，这时再用 su ：
 
 ``` bash
-w4rlock@MacBook-Pro:~$ su
+$ su
 Password:
-sh-3.2#
 ```
 
 搞定。
