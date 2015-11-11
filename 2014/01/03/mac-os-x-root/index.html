@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="zy.i.tw">
 <meta property="og:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
 1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
-<meta property="og:updated_time" content="2015-11-10T12:31:58.383Z">
+<meta property="og:updated_time" content="2015-11-11T13:59:10.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac OS X 下开启 root 用户">
 <meta name="twitter:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
@@ -312,11 +312,11 @@
       
         <span itemprop="articleBody"><p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <p>提示失败，试试 sudo ：</p>
+<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
 <p>好了，这时再用 su ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">w4rlock@MacBook-Pro:~$ su</span><br><span class="line">Password:</span><br><span class="line">sh-<span class="number">3.2</span><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
 <p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
 </span>
       
@@ -438,7 +438,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">Posts</span>
             </a>
           </div>
@@ -452,7 +452,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">Tags</span>
               </a>
           </div>
