@@ -27,12 +27,12 @@ since: 2013
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  #categories: /categories
   Front-End: /categories/Front-End
-  Nodejs: /categories/Nodejs
-  Notes: /categories/Notes
-  #tags: /tags
   archives: /archives
+  categories: /categories
+  #Nodejs: /categories/Nodejs
+  #Notes: /categories/Notes
+  tags: /tags
   #about: /about
   #commonweal: /404.html
 

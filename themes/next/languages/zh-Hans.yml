@@ -51,10 +51,10 @@ counter:
     other: "%d posts in total."
 
 state:
-  posts: Posts
-  pages: Pages
-  tags: Tags
-  categories: Categories
+  posts: posts
+  pages: pages
+  tags: tags
+  categories: categories
 
 cheers:
   um: Um..
