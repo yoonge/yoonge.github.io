@@ -28,11 +28,11 @@ since: 2013
 menu:
   home: /
   Front-End: /categories/Front-End
-  archives: /archives
   categories: /categories
+  tags: /tags
+  archives: /archives
   #Nodejs: /categories/Nodejs
   #Notes: /categories/Notes
-  tags: /tags
   #about: /about
   #commonweal: /404.html
 

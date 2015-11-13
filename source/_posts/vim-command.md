@@ -1,9 +1,9 @@
 title: Vim 命令大全
 date: 2014-09-29 13:44:31
 tags:
-- vim
-- windows
-- unix
+    - vim
+    - windows
+    - unix
 categories: Notes
 ---
 ## 命令历史
