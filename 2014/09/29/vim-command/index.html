@@ -1,0 +1,802 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="unix,vim,windows," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zy.i.tw" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="命令历史以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。
+启动 vim在命令行窗口中输入以下命令即可
+12vim    # 直接启动 vimvim filename    # 打开 vim 并创建名为 filename 的文件
+文件命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim 命令大全">
+<meta property="og:url" content="http://zyi.tw/2014/09/29/vim-command/index.html">
+<meta property="og:site_name" content="zy.i.tw">
+<meta property="og:description" content="命令历史以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。
+启动 vim在命令行窗口中输入以下命令即可
+12vim    # 直接启动 vimvim filename    # 打开 vim 并创建名为 filename 的文件
+文件命令">
+<meta property="og:updated_time" content="2015-11-11T13:58:27.847Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vim 命令大全">
+<meta name="twitter:description" content="命令历史以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。
+启动 vim在命令行窗口中输入以下命令即可
+12vim    # 直接启动 vimvim filename    # 打开 vim 并创建名为 filename 的文件
+文件命令">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> Vim 命令大全 | zy.i.tw </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?23c2226d9da02df3144638200c5d8f75";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zy.i.tw</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">时光静好，与君语；细水流年，与君同；繁华落尽，与君老。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-front-end">
+          <a href="/categories/Front-End" rel="section">
+            
+              <i class="menu-item-icon fa fa-facebook fa-fw"></i> <br />
+            
+            Front-End
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+      
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            
+              <i class="menu-item-icon fa fa-search icon-next-search"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'qvHttZ3d-c61Spts1s3U','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Vim 命令大全
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2014-09-29T13:44:31+08:00" content="2014-09-29">
+              2014-09-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/09/29/vim-command/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/09/29/vim-command/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h2 id="命令历史">命令历史</h2><p>以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。</p>
+<h2 id="启动_vim">启动 vim</h2><p>在命令行窗口中输入以下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim    <span class="comment"># 直接启动 vim</span></span><br><span class="line">vim filename    <span class="comment"># 打开 vim 并创建名为 filename 的文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="文件命令">文件命令</h2><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim file    <span class="comment"># 打开单个文件</span></span><br><span class="line">vim file1 file2 file3 ...    <span class="comment"># 同时打开多个文件</span></span><br><span class="line">:open file    <span class="comment"># 在 vim 窗口中打开一个新文件</span></span><br><span class="line">:split file    <span class="comment"># 在新窗口中打开文件</span></span><br><span class="line">:bn    <span class="comment"># 切换到下一个文件</span></span><br><span class="line">:bp    <span class="comment"># 切换到上一个文件</span></span><br><span class="line">:args    <span class="comment"># 查看当前打开的文件列表，当前正在编辑的文件会用 [] 括起来</span></span><br></pre></td></tr></table></figure>
+<p>打开远程文件，比如 ftp 或者 share folder</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:e ftp://<span class="number">192.168</span>.<span class="number">10.76</span>/abc.txt</span><br><span class="line">:e \\qadrive\<span class="built_in">test</span>\<span class="number">1</span>.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Vim_的模式">Vim 的模式</h2><p>正常模式    （按 Esc 或 Ctrl + [ 进入） —— 左下角显示文件名或为空<br>插入模式    （按 i 键进入） —— 左下角显示 –INSERT–<br>可视模式    （按 v 或 V 进入） —— 左下角显示 –VISUAL–</p>
+<h2 id="导航命令">导航命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%    <span class="comment"># 括号匹配</span></span><br></pre></td></tr></table></figure>
+<h2 id="插入命令">插入命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i    <span class="comment"># 在当前位置生前插入</span></span><br><span class="line">I    <span class="comment"># 在当前行首插入</span></span><br><span class="line">a    <span class="comment"># 在当前位置后插入</span></span><br><span class="line">A    <span class="comment"># 在当前行尾插入</span></span><br><span class="line">o    <span class="comment"># 在当前行之后插入一行</span></span><br><span class="line">O    <span class="comment"># 在当前行之前插入一行</span></span><br></pre></td></tr></table></figure>
+<h2 id="查找命令">查找命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/text    <span class="comment"># 查找 text ，按 n 健查找下一个，按 N 健查找前一个</span></span><br><span class="line">?text    <span class="comment"># 查找 text ，反向查找，按 n 健查找下一个，按 N 健查找前一个</span></span><br></pre></td></tr></table></figure>
+<p>vim 中有一些特殊字符在查找时需要转义    .*[]^%/?~$</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> ignorecase    <span class="comment"># 忽略大小写的查找</span></span><br><span class="line">:<span class="built_in">set</span> noignorecase    <span class="comment"># 不忽略大小写的查找</span></span><br></pre></td></tr></table></figure>
+<p>查找很长的词，如果一个词很长，键入麻烦，可以将光标移动到该词上，按 * 或 # 键即可以该单词进行搜索，* 相当于 / 搜索。而 # 命令相当于 ? 搜索。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">set</span> hlsearch    <span class="comment"># 高亮搜索结果，所有结果都高亮显示，而不是只显示一个匹配</span></span><br><span class="line">:<span class="built_in">set</span> nohlsearch    <span class="comment"># 关闭高亮搜索显示</span></span><br><span class="line">:nohlsearch    <span class="comment"># 关闭当前的高亮显示，如果再次搜索或者按下 n 或 N 键，则会再次高亮</span></span><br><span class="line">:<span class="built_in">set</span> incsearch    <span class="comment"># 逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成</span></span><br><span class="line">:<span class="built_in">set</span> wrapscan    <span class="comment"># 重新搜索，在搜索到文件头或尾时，返回继续搜索，默认开启</span></span><br></pre></td></tr></table></figure>
+<h2 id="替换命令">替换命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ra    <span class="comment"># 将当前字符替换为 a，当期字符即光标所在字符</span></span><br><span class="line">s/old/new/    <span class="comment"># 用 old 替换 new，替换当前行的第一个匹配</span></span><br><span class="line">s/old/new/g    <span class="comment"># 用 old 替换 new，替换当前行的所有匹配</span></span><br><span class="line">%s/old/new/    <span class="comment"># 用 old 替换 new，替换所有行的第一个匹配</span></span><br><span class="line">%s/old/new/g    <span class="comment"># 用 old 替换 new，替换整个文件的所有匹配</span></span><br><span class="line">:<span class="number">10</span>,<span class="number">20</span> s/^/ /g    <span class="comment"># 在第 10 行至第 20 行每行前面加四个空格，用于缩进</span></span><br><span class="line">ddp    <span class="comment"># 交换光标所在行和其下紧邻的一行</span></span><br></pre></td></tr></table></figure>
+<h2 id="移动命令">移动命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h    <span class="comment"># 左移一个字符</span></span><br><span class="line">l    <span class="comment"># 右移一个字符，这个命令很少用，一般用 w 代替</span></span><br><span class="line">k    <span class="comment"># 上移一个字符</span></span><br><span class="line">j    <span class="comment"># 下移一个字符</span></span><br></pre></td></tr></table></figure>
+<p>以上四个命令可以配合数字使用，比如 20j 就是向下移动 20 行，5h 就是向左移动 5 个字符，在 vim 中，很多命令都可以配合数字使用，比如删除 10 个字符 10x，在当前位置后插入 3 个！，3a！<esc>，这里的 Esc 是必须的，否则命令不生效。</esc></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">w    <span class="comment"># 向前移动一个单词（光标停在单词首部），如果已到行尾，则转至下一行行首。此命令快，可以代替 l 命令</span></span><br><span class="line">b    <span class="comment"># 向后移动一个单词 2b 向后移动 2 个单词</span></span><br><span class="line">e    <span class="comment"># 同 w ，只不过是光标停在单词尾部</span></span><br><span class="line">ge    <span class="comment"># 同 b ，光标停在单词尾部</span></span><br><span class="line">^    <span class="comment"># 移动到本行第一个非空白字符上</span></span><br><span class="line"><span class="number">0</span> ( 数字 <span class="number">0</span> )    <span class="comment"># 移动到本行第一个字符上</span></span><br><span class="line">&lt;HOME&gt;    <span class="comment"># 移动到本行第一个字符。同 0 健</span></span><br><span class="line">$    <span class="comment"># 移动到行尾 3$ 移动到下面 3 行的行尾</span></span><br><span class="line">gg    <span class="comment"># 移动到文件头    gg = [[</span></span><br><span class="line">G ( <span class="built_in">shift</span> + g )    <span class="comment"># 移动到文件尾    G = ]]</span></span><br><span class="line">f ( find )    <span class="comment"># 命令也可以用于移动，fx 将找到光标后第一个为 x 的字符，3fd 将找到第三个为 d 的字符</span></span><br><span class="line">F    <span class="comment"># 同 f ，反向查找</span></span><br></pre></td></tr></table></figure>
+<p>跳到指定行，冒号 + 行号，回车，比如跳到 240 行就是 :240 回车。另一个方法是行号 +G ，比如 230G 跳到 230 行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + e    <span class="comment"># 向下滚动一行</span></span><br><span class="line">Ctrl + y    <span class="comment"># 向上滚动一行</span></span><br><span class="line">Ctrl + d    <span class="comment"># 向下滚动半屏</span></span><br><span class="line">Ctrl + u    <span class="comment"># 向上滚动半屏</span></span><br><span class="line">Ctrl + f    <span class="comment"># 向下滚动一屏</span></span><br><span class="line">Ctrl + b    <span class="comment"># 向上滚动一屏</span></span><br></pre></td></tr></table></figure>
+<h2 id="撤销和重做">撤销和重做</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">u    <span class="comment"># 撤销 ( Undo )</span></span><br><span class="line">U    <span class="comment"># 撤销对整行的操作</span></span><br><span class="line">Ctrl + r    <span class="comment"># 重做 ( Redo ) ，即撤销的撤销</span></span><br></pre></td></tr></table></figure>
+<h2 id="删除命令">删除命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">x    <span class="comment"># 删除当前字符</span></span><br><span class="line"><span class="number">3</span>x    <span class="comment"># 删除当前光标开始向后三个字符</span></span><br><span class="line">X    <span class="comment"># 删除当前字符的前一个字符    X = dh</span></span><br><span class="line">dl    <span class="comment"># 删除当前字符    dl = x</span></span><br><span class="line">dh    <span class="comment"># 删除前一个字符</span></span><br><span class="line">dd    <span class="comment"># 删除当前行</span></span><br><span class="line">dj    <span class="comment"># 删除上一行</span></span><br><span class="line">dk    <span class="comment"># 删除下一行</span></span><br><span class="line"><span class="number">10</span>d    <span class="comment"># 删除当前行开始的 10 行</span></span><br><span class="line">D    <span class="comment"># 删除当前字符至行尾    D = d$</span></span><br><span class="line">d$    <span class="comment"># 删除当前字符之后的所有字符（本行）</span></span><br><span class="line">kdgg    <span class="comment"># 删除当前行之前所有行（不包括当前行）</span></span><br><span class="line">jdG ( jd <span class="built_in">shift</span> + g )    <span class="comment"># 删除当前行之后所有行（不包括当前行）</span></span><br><span class="line"></span><br><span class="line">:<span class="number">1</span>,<span class="number">10</span>d    <span class="comment"># 删除 1-10 行</span></span><br><span class="line">:<span class="number">11</span>,<span class="variable">$d</span>    <span class="comment"># 删除 11 行及以后所有的行</span></span><br><span class="line">:<span class="number">1</span>,<span class="variable">$d</span>    <span class="comment"># 删除所有行</span></span><br><span class="line">J ( <span class="built_in">shift</span> + j )    <span class="comment"># 删除两行之间的空行，实际上是合并两行</span></span><br></pre></td></tr></table></figure>
+<h2 id="拷贝和粘贴">拷贝和粘贴</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yy    <span class="comment"># 拷贝当前行</span></span><br><span class="line">nyy    <span class="comment"># 拷贝当前后开始的 n 行，比如 2yy 拷贝当前行及其下一行</span></span><br><span class="line">p    <span class="comment"># 在当前光标后粘贴，如果之前使用了 yy 命令来复制一行，那么就在当前行的下一行粘贴</span></span><br><span class="line"><span class="built_in">shift</span> + p    <span class="comment"># 在当前行前粘贴</span></span><br><span class="line"></span><br><span class="line">:<span class="number">1</span>,<span class="number">10</span> co <span class="number">20</span>    <span class="comment"># 将 1-10 行插入到第 20 行之后</span></span><br><span class="line">:<span class="number">1</span>,$ co $    <span class="comment"># 将整个文件复制一份并添加到文件尾部</span></span><br></pre></td></tr></table></figure>
+<p>正常模式下按 v（逐字）或 V（逐行）进入可视模式，然后用 jklh 命令移动即可选择某些行或字符，再按 y 即可复制。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ddp    <span class="comment"># 交换当前行和其下一行</span></span><br><span class="line">xp    <span class="comment"># 交换当前字符和其后一个字符</span></span><br></pre></td></tr></table></figure>
+<h2 id="剪切命令">剪切命令</h2><p>正常模式下按 v（逐字）或 V（逐行）进入可视模式，然后用 jklh 命令移动即可选择某些行或字符，再按 d 即可剪切。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ndd    <span class="comment"># 剪切当前行之后的 n 行。利用 p 命令可以对剪切的内容进行粘贴</span></span><br><span class="line">:<span class="number">1</span>,<span class="number">10</span>d    <span class="comment"># 将 1-10 行剪切。利用 p 命令可将剪切后的内容进行粘贴</span></span><br><span class="line">:<span class="number">1</span>, <span class="number">10</span> m <span class="number">20</span>    <span class="comment"># 将第 1-10 行移动到第 20 行之后</span></span><br></pre></td></tr></table></figure>
+<h2 id="退出命令">退出命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:wq    <span class="comment"># 保存并退出</span></span><br><span class="line">ZZ    <span class="comment"># 保存并退出</span></span><br><span class="line">:q!    <span class="comment"># 强制退出并忽略所有更改</span></span><br><span class="line">:e!    <span class="comment"># 放弃所有修改，并打开原来文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="窗口命令">窗口命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:split or new    <span class="comment"># 打开一个新窗口，光标停在顶层的窗口上</span></span><br><span class="line">:split file or :new file    <span class="comment"># 用新窗口打开文件</span></span><br><span class="line">split <span class="comment"># 打开的窗口都是横向的，使用 vsplit 可以纵向打开窗口</span></span><br><span class="line"></span><br><span class="line">Ctrl + ww    <span class="comment"># 移动到下一个窗口</span></span><br><span class="line">Ctrl + wj    <span class="comment"># 移动到下方的窗口</span></span><br><span class="line">Ctrl + wk    <span class="comment"># 移动到上方的窗口</span></span><br></pre></td></tr></table></figure>
+<h2 id="关闭窗口">关闭窗口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:close    <span class="comment"># 最后一个窗口不能使用此命令，可以防止意外退出 vim</span></span><br><span class="line">:q    <span class="comment"># 如果是最后一个被关闭的窗口，那么将退出 vim</span></span><br><span class="line">ZZ    <span class="comment"># 保存并退出</span></span><br><span class="line">:only    <span class="comment"># 关闭所有窗口，只保留当前窗口</span></span><br></pre></td></tr></table></figure>
+<h2 id="录制宏">录制宏</h2><p>按 q 键加任意字母开始录制，再按 q 键结束录制（这意味着 vim 中的宏不可嵌套），使用的时候 @ 加宏名，比如 qa。。。q 录制名为 a 的宏，@a 使用这个宏。</p>
+<h2 id="执行_shell_命令">执行 shell 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:!<span class="built_in">command</span></span><br><span class="line">:!ls    <span class="comment"># 列出当前目录下文件</span></span><br><span class="line">:!perl -c script.pl    <span class="comment"># 检查 perl 脚本语法，可以不用退出 vim ，非常方便</span></span><br><span class="line">:!perl script.pl    <span class="comment"># 执行 perl 脚本，可以不用退出 vim ，非常方便</span></span><br><span class="line">:<span class="built_in">suspend</span> or Ctrl + Z    <span class="comment"># 挂起 vim，回到 shell ，按 fg 可以返回 vim</span></span><br></pre></td></tr></table></figure>
+<h2 id="注释命令">注释命令</h2><p>perl 程序中 # 开始的行为注释，所以要注释某些行，只需在行首加入 # 。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>,<span class="number">5</span> s/^/<span class="comment">#/g    # 注释第 3-5 行</span></span><br><span class="line"><span class="number">3</span>,<span class="number">5</span> s/^<span class="comment">#//g    # 解除 3-5 行的注释</span></span><br><span class="line"><span class="number">1</span>,$ s/^/<span class="comment">#/g    # 注释整个文档</span></span><br><span class="line">:%s/^/<span class="comment">#/g    # 注释整个文档，此法更快</span></span><br></pre></td></tr></table></figure>
+<h2 id="帮助命令">帮助命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">help</span> or F1    <span class="comment"># 显示整个帮助</span></span><br><span class="line">:<span class="built_in">help</span> xxx    <span class="comment"># 显示 xxx 的帮助，比如： :help i , :help CTRL-[ （即 Ctrl + [ 的帮助）</span></span><br><span class="line">:<span class="built_in">help</span> <span class="string">'number'</span>    <span class="comment"># vim 选项的帮助用单引号括起</span></span><br><span class="line">:<span class="built_in">help</span> &lt;Esc&gt;    <span class="comment"># 特殊键的帮助用 &lt;&gt; 扩起</span></span><br><span class="line">:<span class="built_in">help</span> -t    <span class="comment"># vim 启动参数的帮助用 -</span></span><br><span class="line">：<span class="built_in">help</span> i_&lt;Esc&gt;    <span class="comment"># 插入模式下 Esc 的帮助，某个模式下的帮助用 模式_主题 的模式</span></span><br></pre></td></tr></table></figure>
+<p>帮助文件中位于 || 之间的内容是超链接，可以用 Ctrl + ] 进入链接，Ctrl + o ( Ctrl + t ) 返回。</p>
+<h2 id="其他非编辑命令">其他非编辑命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.    <span class="comment"># 重复前一次命令</span></span><br><span class="line">:<span class="built_in">set</span> ruler?    <span class="comment"># 查看是否设置了 ruler ，在 .vimrc 中，使用 set 命令设制的选项都可以通过这个命令查看</span></span><br><span class="line">:scriptnames    <span class="comment"># 查看 vim 脚本文件的位置，比如 .vimrc 文件，语法文件及 plugin 等</span></span><br><span class="line">:<span class="built_in">set</span> list    <span class="comment"># 显示非打印字符，如 tab ，空格，行尾等。如果 tab 无法显示，请确定用 set lcs=tab:&gt;- 命令设置了 .vimrc 文件，并确保你的文件中的确有 tab ，如果开启了 expendtab ，那么 tab 将被扩展为空格</span></span><br></pre></td></tr></table></figure>
+<h2 id="Vim_教程">Vim 教程</h2><p>在 Unix 系统上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vimtutor</span><br></pre></td></tr></table></figure>
+<p>在 Windows 系统上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:<span class="built_in">help</span> tutor</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:syntax    <span class="comment"># 列出已经定义的语法项</span></span><br><span class="line">:syntax clear    <span class="comment"># 清除已定义的语法规则</span></span><br><span class="line">:syntax <span class="keyword">case</span> match    <span class="comment"># 大小写敏感，int 和 Int 将视为不同的语法元素</span></span><br><span class="line">:syntax <span class="keyword">case</span> ignore    <span class="comment"># 大小写无关，int 和 Int 将视为相同的语法元素，并使用同样的配色方案</span></span><br></pre></td></tr></table></figure>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/unix/" rel="tag">#unix</a>
+          
+            <a href="/tags/vim/" rel="tag">#vim</a>
+          
+            <a href="/tags/windows/" rel="tag">#windows</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/09/19/json-traversal/" rel="next" title="JSON 遍历">
+                <i class="fa fa-chevron-left"></i> JSON 遍历
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/03/07/nodejs-update/" rel="prev" title="Nodejs Update">
+                Nodejs Update <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2014/09/29/vim-command/"
+     data-title="Vim 命令大全"
+     data-content=""
+     data-url="http://zyi.tw/2014/09/29/vim-command/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2014/09/29/vim-command/"
+           data-title="Vim 命令大全" data-url="http://zyi.tw/2014/09/29/vim-command/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="Yoonge" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Yoonge</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Front-End, NodeJS, React Native</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令历史"><span class="nav-number">1.</span> <span class="nav-text">命令历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动_vim"><span class="nav-number">2.</span> <span class="nav-text">启动 vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件命令"><span class="nav-number">3.</span> <span class="nav-text">文件命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vim_的模式"><span class="nav-number">4.</span> <span class="nav-text">Vim 的模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导航命令"><span class="nav-number">5.</span> <span class="nav-text">导航命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入命令"><span class="nav-number">6.</span> <span class="nav-text">插入命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找命令"><span class="nav-number">7.</span> <span class="nav-text">查找命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换命令"><span class="nav-number">8.</span> <span class="nav-text">替换命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动命令"><span class="nav-number">9.</span> <span class="nav-text">移动命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销和重做"><span class="nav-number">10.</span> <span class="nav-text">撤销和重做</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除命令"><span class="nav-number">11.</span> <span class="nav-text">删除命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拷贝和粘贴"><span class="nav-number">12.</span> <span class="nav-text">拷贝和粘贴</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#剪切命令"><span class="nav-number">13.</span> <span class="nav-text">剪切命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出命令"><span class="nav-number">14.</span> <span class="nav-text">退出命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#窗口命令"><span class="nav-number">15.</span> <span class="nav-text">窗口命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭窗口"><span class="nav-number">16.</span> <span class="nav-text">关闭窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#录制宏"><span class="nav-number">17.</span> <span class="nav-text">录制宏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行_shell_命令"><span class="nav-number">18.</span> <span class="nav-text">执行 shell 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释命令"><span class="nav-number">19.</span> <span class="nav-text">注释命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#帮助命令"><span class="nav-number">20.</span> <span class="nav-text">帮助命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他非编辑命令"><span class="nav-number">21.</span> <span class="nav-text">其他非编辑命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vim_教程"><span class="nav-number">22.</span> <span class="nav-text">Vim 教程</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yoonge</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zyitw"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
