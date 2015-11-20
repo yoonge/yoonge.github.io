@@ -57,23 +57,20 @@
 
 <meta name="description" content="查看本地分支123$ git branch* hexo  master
 查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
-创建本地分支 test123456$ git branch test$ git branch* hexo  master  test
-切换到本地分支 t">
+创建本地分支 test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 远程、本地分支操作">
 <meta property="og:url" content="http://zyi.tw/2015/11/20/git-branch/index.html">
 <meta property="og:site_name" content="zy.i.tw">
 <meta property="og:description" content="查看本地分支123$ git branch* hexo  master
 查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
-创建本地分支 test123456$ git branch test$ git branch* hexo  master  test
-切换到本地分支 t">
-<meta property="og:updated_time" content="2015-11-20T11:16:37.675Z">
+创建本地分支 test">
+<meta property="og:updated_time" content="2015-11-20T11:20:20.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 远程、本地分支操作">
 <meta name="twitter:description" content="查看本地分支123$ git branch* hexo  master
 查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
-创建本地分支 test123456$ git branch test$ git branch* hexo  master  test
-切换到本地分支 t">
+创建本地分支 test">
 
 
 
@@ -318,7 +315,8 @@
       
         <span itemprop="articleBody"><h2 id="查看本地分支">查看本地分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 <h2 id="查看本地和远程分支">查看本地和远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
-<h2 id="创建本地分支_test">创建本地分支 test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="创建本地分支_test">创建本地分支 test</h2><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <h2 id="切换到本地分支_test">切换到本地分支 test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout <span class="built_in">test</span></span><br><span class="line">Switched to branch <span class="string">'test'</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <h2 id="把本地分支_test_推送到远程分支">把本地分支 test 推送到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span></span><br><span class="line">Total <span class="number">0</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">* [new branch]    <span class="built_in">test</span> -&gt; <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <h2 id="同步本地远程分支">同步本地远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin</span><br></pre></td></tr></table></figure>
