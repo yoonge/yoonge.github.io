@@ -4,7 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-  <updated>2015-11-11T12:45:20.875Z</updated>
+  <updated>2015-11-21T03:52:30.608Z</updated>
   <id>http://zyi.tw/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Git 远程、本地分支操作]]></title>
+    <link href="http://zyi.tw/2015/11/20/git-branch/"/>
+    <id>http://zyi.tw/2015/11/20/git-branch/</id>
+    <published>2015-11-20T10:26:49.000Z</published>
+    <updated>2015-11-21T03:52:30.608Z</updated>
+    <content type="html"><![CDATA[<h2 id="查看本地分支">查看本地分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<h2 id="查看本地和远程分支">查看本地和远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
+<h2 id="创建本地分支_test">创建本地分支 test</h2><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="切换到本地分支_test">切换到本地分支 test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout <span class="built_in">test</span></span><br><span class="line">Switched to branch <span class="string">'test'</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="把本地分支_test_推送到远程分支">把本地分支 test 推送到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span></span><br><span class="line">Total <span class="number">0</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">* [new branch]    <span class="built_in">test</span> -&gt; <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="同步本地远程分支">同步本地远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin</span><br></pre></td></tr></table></figure>
+<h2 id="提交本地分支数据到远程分支">提交本地分支数据到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span>:<span class="built_in">test</span>   <span class="comment"># &lt;local_branch_name&gt;:&lt;remote_branch_name&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果当前处于 test 分支下，也可以直接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<h2 id="删除远程分支_test">删除远程分支 test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin :<span class="built_in">test</span></span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">- [deleted]    <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
+<h3 id="删除本地分支_test">删除本地分支 test</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout hexo</span><br><span class="line">Switched to branch <span class="string">'hexo'</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-d</span> <span class="built_in">test</span></span><br><span class="line">Deleted branch <span class="built_in">test</span> (was <span class="number">131</span>eba3).</span><br><span class="line"></span><br><span class="line">$ git brach</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="查看本地分支">查看本地分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<h2 id="查看本地和远程分支">查看本地和远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
+<h2 id="创建本地分支_test">创建本地分支 test</h2>]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://zyi.tw/tags/git/"/>
+    
+      <category term="Notes" scheme="http://zyi.tw/categories/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Nodejs Update]]></title>
@@ -42,7 +74,7 @@
     <link href="http://zyi.tw/2014/09/29/vim-command/"/>
     <id>http://zyi.tw/2014/09/29/vim-command/</id>
     <published>2014-09-29T05:44:31.000Z</published>
-    <updated>2015-11-13T13:07:49.513Z</updated>
+    <updated>2015-11-13T13:07:53.772Z</updated>
     <content type="html"><![CDATA[<h2 id="命令历史">命令历史</h2><p>以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。</p>
 <h2 id="启动_vim">启动 vim</h2><p>在命令行窗口中输入以下命令即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim    <span class="comment"># 直接启动 vim</span></span><br><span class="line">vim filename    <span class="comment"># 打开 vim 并创建名为 filename 的文件</span></span><br></pre></td></tr></table></figure>
@@ -138,7 +170,7 @@
     <link href="http://zyi.tw/2014/01/03/mac-os-x-root/"/>
     <id>http://zyi.tw/2014/01/03/mac-os-x-root/</id>
     <published>2014-01-03T02:39:38.000Z</published>
-    <updated>2015-11-13T13:07:31.291Z</updated>
+    <updated>2015-11-13T13:07:59.806Z</updated>
     <content type="html"><![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
 <p>提示失败，试试 sudo ：</p>
@@ -168,7 +200,7 @@
     <link href="http://zyi.tw/2013/12/22/hello-hexo/"/>
     <id>http://zyi.tw/2013/12/22/hello-hexo/</id>
     <published>2013-12-22T04:12:22.000Z</published>
-    <updated>2015-11-11T13:59:51.183Z</updated>
+    <updated>2015-11-11T14:00:04.878Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> ! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
