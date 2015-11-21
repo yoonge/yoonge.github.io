@@ -1,5 +1,5 @@
 title: Git 远程、本地分支操作
-date: 2015-11-20 18:26:49
+date: 2014-11-20 18:26:49
 tags: git
 categories: Notes
 ---
@@ -73,6 +73,7 @@ $ git fetch origin
 
 ``` bash
 $ git push origin test:test   # <local_branch_name>:<remote_branch_name>
+Everything up-to-date
 ```
 
 如果当前处于 test 分支下，也可以直接：
