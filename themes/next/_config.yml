@@ -180,10 +180,10 @@ baidu_analytics: 23c2226d9da02df3144638200c5d8f75
 duoshuo_shortname: zyitw
 
 # Disqus
-#disqus_shortname:
+#disqus_shortname: zyitw
 
 # Share
-#jiathis:
+#jiathis: true
 
 # Share
 duoshuo_share: true
