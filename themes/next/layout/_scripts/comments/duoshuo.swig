@@ -22,8 +22,8 @@
      {% if theme.duoshuo_info.admin_enable %}
      {% if theme.duoshuo_info.admin_nickname %}
   	  <script type="text/javascript">
-  		var duoshuo_user_ID = {{theme.duoshuo_info.user_id}}
-      var duoshuo_admin_nickname="{{theme.duoshuo_info.admin_nickname}}"
+  	   var duoshuo_user_ID = {{theme.duoshuo_info.user_id}}
+       var duoshuo_admin_nickname="{{theme.duoshuo_info.admin_nickname}}"
   	  </script>
      {% endif %}
   	<script src="{{ url_for(theme.js) }}/ua-parser.min.js"></script>
