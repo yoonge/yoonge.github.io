@@ -60,12 +60,12 @@
 创建本地分支 test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 远程、本地分支操作">
-<meta property="og:url" content="http://zyi.tw/2015/11/20/git-branch/index.html">
+<meta property="og:url" content="http://zyi.tw/2014/11/20/git-branch/index.html">
 <meta property="og:site_name" content="zy.i.tw">
 <meta property="og:description" content="查看本地分支123$ git branch* hexo  master
 查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
 创建本地分支 test">
-<meta property="og:updated_time" content="2015-11-20T11:53:42.776Z">
+<meta property="og:updated_time" content="2015-11-21T04:13:45.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 远程、本地分支操作">
 <meta name="twitter:description" content="查看本地分支123$ git branch* hexo  master
@@ -267,8 +267,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-11-20T18:26:49+08:00" content="2015-11-20">
-              2015-11-20
+            <time itemprop="dateCreated" datetime="2014-11-20T18:26:49+08:00" content="2014-11-20">
+              2014-11-20
             </time>
           </span>
 
@@ -293,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/20/git-branch/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/20/git-branch/" itemprop="commentsCount"></span>
+                <a href="/2014/11/20/git-branch/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/20/git-branch/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -320,7 +320,7 @@
 <h2 id="切换到本地分支_test">切换到本地分支 test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout <span class="built_in">test</span></span><br><span class="line">Switched to branch <span class="string">'test'</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <h2 id="把本地分支_test_推送到远程分支">把本地分支 test 推送到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span></span><br><span class="line">Total <span class="number">0</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">* [new branch]    <span class="built_in">test</span> -&gt; <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <h2 id="同步本地远程分支">同步本地远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin</span><br></pre></td></tr></table></figure>
-<h2 id="提交本地分支数据到远程分支">提交本地分支数据到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span>:<span class="built_in">test</span>   <span class="comment"># &lt;local_branch_name&gt;:&lt;remote_branch_name&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="提交本地分支数据到远程分支">提交本地分支数据到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span>:<span class="built_in">test</span>   <span class="comment"># &lt;local_branch_name&gt;:&lt;remote_branch_name&gt;</span></span><br><span class="line">Everything up-to-date</span><br></pre></td></tr></table></figure>
 <p>如果当前处于 test 分支下，也可以直接：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
 <h2 id="删除远程分支_test">删除远程分支 test</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin :<span class="built_in">test</span></span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">- [deleted]    <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
@@ -342,13 +342,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/07/nodejs-update/" rel="next" title="Nodejs Update">
-                <i class="fa fa-chevron-left"></i> Nodejs Update
+              <a href="/2014/09/29/vim-command/" rel="next" title="Vim 命令大全">
+                <i class="fa fa-chevron-left"></i> Vim 命令大全
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/03/07/nodejs-update/" rel="prev" title="Nodejs Update">
+                Nodejs Update <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -363,10 +367,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/11/20/git-branch/"
+        <div class="ds-share flat" data-thread-key="2014/11/20/git-branch/"
      data-title="Git 远程、本地分支操作"
      data-content=""
-     data-url="http://zyi.tw/2015/11/20/git-branch/">
+     data-url="http://zyi.tw/2014/11/20/git-branch/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -394,8 +398,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/11/20/git-branch/"
-           data-title="Git 远程、本地分支操作" data-url="http://zyi.tw/2015/11/20/git-branch/">
+      <div class="ds-thread" data-thread-key="2014/11/20/git-branch/"
+           data-title="Git 远程、本地分支操作" data-url="http://zyi.tw/2014/11/20/git-branch/">
       </div>
     
   </div>
@@ -565,6 +569,15 @@
   </script>
     
      
+     
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = 11145759
+      var duoshuo_admin_nickname="Yoonge"
+  	  </script>
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
 
 
     
