@@ -38,6 +38,36 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Mac OS X 下开启 root 用户]]></title>
+    <link href="http://zyi.tw/2015/04/03/mac-os-x-root/"/>
+    <id>http://zyi.tw/2015/04/03/mac-os-x-root/</id>
+    <published>2015-04-03T10:50:38.000Z</published>
+    <updated>2015-11-27T09:19:17.692Z</updated>
+    <content type="html"><![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
+<p>提示失败，试试 sudo ：</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
+<p>好了，这时再用 su ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
+<p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
+<p>提示失败，试试 sudo ：</p>]]>
+    
+    </summary>
+    
+      <category term="mac" scheme="http://zyi.tw/tags/mac/"/>
+    
+      <category term="os x" scheme="http://zyi.tw/tags/os-x/"/>
+    
+      <category term="Unix" scheme="http://zyi.tw/categories/Unix/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[云南之旅]]></title>
     <link href="http://zyi.tw/2015/03/18/yunnan-journey/"/>
     <id>http://zyi.tw/2015/03/18/yunnan-journey/</id>
@@ -185,36 +215,6 @@
       <category term="json" scheme="http://zyi.tw/tags/json/"/>
     
       <category term="Front-End" scheme="http://zyi.tw/categories/Front-End/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Mac OS X 下开启 root 用户]]></title>
-    <link href="http://zyi.tw/2014/04/03/mac-os-x-root/"/>
-    <id>http://zyi.tw/2014/04/03/mac-os-x-root/</id>
-    <published>2014-04-03T10:50:38.000Z</published>
-    <updated>2015-11-27T09:17:20.926Z</updated>
-    <content type="html"><![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
-<p>提示失败，试试 sudo ：</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
-<p>好了，这时再用 su ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
-<p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
-<p>提示失败，试试 sudo ：</p>]]>
-    
-    </summary>
-    
-      <category term="mac" scheme="http://zyi.tw/tags/mac/"/>
-    
-      <category term="os x" scheme="http://zyi.tw/tags/os-x/"/>
-    
-      <category term="Unix" scheme="http://zyi.tw/categories/Unix/"/>
     
   </entry>
   
