@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zyi.tw/2015/03/18/yunnan-journey/</loc>
+    <lastmod>2015-11-27T09:08:21.917Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zyi.tw/2015/03/07/nodejs-update/</loc>
     <lastmod>2015-11-27T08:58:30.872Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
     <lastmod>2015-11-27T08:58:08.998Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/03/18/yunnan-journey/</loc>
-    <lastmod>2015-11-27T08:52:11.293Z</lastmod>
   </url>
   
   <url>

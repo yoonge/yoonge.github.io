@@ -4,7 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-  <updated>2015-11-27T08:58:30.872Z</updated>
+  <updated>2015-11-27T09:08:21.917Z</updated>
   <id>http://zyi.tw/</id>
   
   <author>
@@ -13,6 +13,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[云南之旅]]></title>
+    <link href="http://zyi.tw/2015/03/18/yunnan-journey/"/>
+    <id>http://zyi.tw/2015/03/18/yunnan-journey/</id>
+    <published>2015-03-18T07:53:20.000Z</published>
+    <updated>2015-11-27T09:08:21.917Z</updated>
+    <content type="html"><![CDATA[<p>测试传图</p>
+<p><img src="/images/20150318.jpg" alt="云南之旅"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>测试传图</p>
+<p><img src="/images/20150318.jpg" alt="云南之旅"></p>
+]]>
+    </summary>
+    
+      <category term="云南" scheme="http://zyi.tw/tags/%E4%BA%91%E5%8D%97/"/>
+    
+      <category term="Notes" scheme="http://zyi.tw/categories/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Nodejs Update]]></title>
@@ -192,27 +213,6 @@
       <category term="os x" scheme="http://zyi.tw/tags/os-x/"/>
     
       <category term="Unix" scheme="http://zyi.tw/categories/Unix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[云南之旅]]></title>
-    <link href="http://zyi.tw/2014/03/18/yunnan-journey/"/>
-    <id>http://zyi.tw/2014/03/18/yunnan-journey/</id>
-    <published>2014-03-18T07:53:20.000Z</published>
-    <updated>2015-11-27T08:52:11.293Z</updated>
-    <content type="html"><![CDATA[<p>测试传图</p>
-<p><img src="/images/20140318.jpg" alt="云南之旅"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>测试传图</p>
-<p><img src="/images/20140318.jpg" alt="云南之旅"></p>
-]]>
-    </summary>
-    
-      <category term="云南" scheme="http://zyi.tw/tags/%E4%BA%91%E5%8D%97/"/>
-    
-      <category term="Notes" scheme="http://zyi.tw/categories/Notes/"/>
     
   </entry>
   
