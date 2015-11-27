@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mac,os x," />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -55,19 +55,19 @@
 
 
 
-<meta name="description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta name="description" content="Welcome to Hexo ! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS X 下开启 root 用户">
-<meta property="og:url" content="http://zyi.tw/2014/01/03/mac-os-x-root/index.html">
+<meta property="og:title" content="Hello Hexo !">
+<meta property="og:url" content="http://zyi.tw/2014/03/17/hello-hexo/index.html">
 <meta property="og:site_name" content="zy.i.tw">
-<meta property="og:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
-<meta property="og:updated_time" content="2015-11-13T13:07:59.806Z">
+<meta property="og:description" content="Welcome to Hexo ! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quic">
+<meta property="og:updated_time" content="2015-11-27T07:44:30.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS X 下开启 root 用户">
-<meta name="twitter:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta name="twitter:title" content="Hello Hexo !">
+<meta name="twitter:description" content="Welcome to Hexo ! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quic">
 
 
 
@@ -79,7 +79,7 @@
   };
 </script>
 
-  <title> Mac OS X 下开启 root 用户 | zy.i.tw </title>
+  <title> Hello Hexo ! | zy.i.tw </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +255,7 @@
             
             
               
-                Mac OS X 下开启 root 用户
+                Hello Hexo !
               
             
           </h1>
@@ -264,8 +264,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2014-01-03T10:39:38+08:00" content="2014-01-03">
-              2014-01-03
+            <time itemprop="dateCreated" datetime="2014-03-17T16:16:22+08:00" content="2014-03-17">
+              2014-03-17
             </time>
           </span>
 
@@ -274,8 +274,8 @@
               &nbsp; | &nbsp; In
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -290,8 +290,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/01/03/mac-os-x-root/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/01/03/mac-os-x-root/" itemprop="commentsCount"></span>
+                <a href="/2014/03/17/hello-hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/03/17/hello-hexo/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -310,14 +310,16 @@
       
 
       
-        <span itemprop="articleBody"><p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
-<p>提示失败，试试 sudo ：</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
-<p>好了，这时再用 su ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
-<p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
+        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> ! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 </span>
       
     </div>
@@ -326,9 +328,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mac/" rel="tag">#mac</a>
-          
-            <a href="/tags/os-x/" rel="tag">#os x</a>
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
           
         </div>
       
@@ -337,16 +337,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/12/22/hello-hexo/" rel="next" title="Hello Hexo !">
-                <i class="fa fa-chevron-left"></i> Hello Hexo !
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/09/19/json-traversal/" rel="prev" title="JSON 遍历">
-                JSON 遍历 <i class="fa fa-chevron-right"></i>
+              <a href="/2014/04/03/mac-os-x-root/" rel="prev" title="Mac OS X 下开启 root 用户">
+                Mac OS X 下开启 root 用户 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -362,10 +358,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2014/01/03/mac-os-x-root/"
-     data-title="Mac OS X 下开启 root 用户"
+        <div class="ds-share flat" data-thread-key="2014/03/17/hello-hexo/"
+     data-title="Hello Hexo !"
      data-content=""
-     data-url="http://zyi.tw/2014/01/03/mac-os-x-root/">
+     data-url="http://zyi.tw/2014/03/17/hello-hexo/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
       <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -393,8 +389,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/01/03/mac-os-x-root/"
-           data-title="Mac OS X 下开启 root 用户" data-url="http://zyi.tw/2014/01/03/mac-os-x-root/">
+      <div class="ds-thread" data-thread-key="2014/03/17/hello-hexo/"
+           data-title="Hello Hexo !" data-url="http://zyi.tw/2014/03/17/hello-hexo/">
       </div>
     
   </div>
@@ -491,7 +487,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -511,7 +507,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2013 - 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>

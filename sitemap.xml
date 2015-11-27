@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zyi.tw/embed.js</loc>
-    <lastmod>2015-11-26T09:14:27.467Z</lastmod>
+    <loc>http://zyi.tw/2014/04/03/mac-os-x-root/</loc>
+    <lastmod>2015-11-27T08:07:32.921Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2014/03/17/hello-hexo/</loc>
+    <lastmod>2015-11-27T07:44:30.483Z</lastmod>
   </url>
   
   <url>
     <loc>http://zyi.tw/2014/11/20/git-branch/</loc>
     <lastmod>2015-11-21T04:13:45.143Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/01/03/mac-os-x-root/</loc>
-    <lastmod>2015-11-13T13:07:59.806Z</lastmod>
   </url>
   
   <url>
@@ -24,11 +24,6 @@
   <url>
     <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
     <lastmod>2015-11-13T13:07:39.105Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2013/12/22/hello-hexo/</loc>
-    <lastmod>2015-11-11T14:00:04.878Z</lastmod>
   </url>
   
   <url>
