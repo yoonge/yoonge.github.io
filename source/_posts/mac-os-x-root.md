@@ -1,5 +1,5 @@
 title: Mac OS X 下开启 root 用户
-date: 2014-01-03 10:39:38
+date: 2015-04-03 18:50:38
 tags:
     - mac
     - os x
