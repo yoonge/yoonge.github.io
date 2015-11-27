@@ -3,7 +3,7 @@ date: 2014-11-20 18:26:48
 tags: git
 categories: Notes
 ---
-## 查看本地分支
+### 查看本地分支
 
 ``` bash
 $ git branch
@@ -11,7 +11,7 @@ $ git branch
   master
 ```
 
-## 查看本地和远程分支
+### 查看本地和远程分支
 
 ``` bash
 $ git branch -a
@@ -21,7 +21,7 @@ $ git branch -a
   remotes/origin/master
 ```
 
-## 创建本地分支 test
+### 创建本地分支 test
 
 <!--more-->
 
@@ -34,7 +34,7 @@ $ git branch
   test
 ```
 
-## 切换到本地分支 test
+### 切换到本地分支 test
 
 ``` bash
 $ git checkout test
@@ -46,7 +46,7 @@ $ git branch
 * test
 ```
 
-## 把本地分支 test 推送到远程分支
+### 把本地分支 test 推送到远程分支
 
 ``` bash
 $ git push origin test
@@ -63,13 +63,13 @@ $ git branch -a
   remotes/origin/test
 ```
 
-## 同步本地远程分支
+### 同步本地远程分支
 
 ``` bash
 $ git fetch origin
 ```
 
-## 提交本地分支数据到远程分支
+### 提交本地分支数据到远程分支
 
 ``` bash
 $ git push origin test:test   # <local_branch_name>:<remote_branch_name>
@@ -82,7 +82,7 @@ Everything up-to-date
 $ git push
 ```
 
-## 删除远程分支 test
+### 删除远程分支 test
 
 ``` bash
 $ git push origin :test

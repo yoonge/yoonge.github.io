@@ -5,7 +5,7 @@ tags:
     - array
 categories: Front-End
 ---
-## grep
+### grep
 
 ``` javascript
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -22,7 +22,7 @@ for ( key in filterArray ) {
 }
 ```
 
-## each
+### each
 
 <!--more-->
 
@@ -40,7 +40,7 @@ $.each (anArray, function( n, value ) {
 });
 ```
 
-## inArray
+### inArray
 
 ``` javascript
 var anArray = ['one', 'two', 'three'];
@@ -49,7 +49,7 @@ alert( index );    // 返回该值在数组中的键值，返回 1
 alert( anArray[index] );    // value is two
 ```
 
-## map
+### map
 
 ``` javascript
 var strings = ['0', '1', '2', '3', '4', 'S', '6'];
@@ -63,7 +63,7 @@ for ( key in values ) {
 }
 ```
 
-## JSON 对象
+### JSON 对象
 
 ``` javascript
 var json = [{ dd : 'SB', AA : '东东', re1 : 123 }, { cccc : 'dd', lk : '1qw' }];
