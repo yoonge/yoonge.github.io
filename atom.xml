@@ -89,11 +89,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Git 远程、本地分支操作]]></title>
-    <link href="http://zyi.tw/2014/11/19/git-branch/"/>
-    <id>http://zyi.tw/2014/11/19/git-branch/</id>
-    <published>2014-11-19T10:26:48.000Z</published>
-    <updated>2015-12-03T03:51:45.255Z</updated>
+    <title><![CDATA[Git 远程、本地分支操作1]]></title>
+    <link href="http://zyi.tw/2014/11/20/git-branch1/"/>
+    <id>http://zyi.tw/2014/11/20/git-branch1/</id>
+    <published>2014-11-20T10:26:48.000Z</published>
+    <updated>2015-12-03T03:53:28.171Z</updated>
     <content type="html"><![CDATA[<h3 id="查看本地分支">查看本地分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 <h3 id="查看本地和远程分支">查看本地和远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
 <h3 id="创建本地分支_test">创建本地分支 test</h3><a id="more"></a>
