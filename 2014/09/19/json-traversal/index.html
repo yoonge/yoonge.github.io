@@ -61,7 +61,7 @@
 <meta property="og:url" content="http://zyi.tw/2014/09/19/json-traversal/index.html">
 <meta property="og:site_name" content="zy.i.tw">
 <meta property="og:description" content="grep123456789101112var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];var filterArray = $.grep( array, function( value ) &amp;#123;    return value &amp;gt; 5;   // 筛选出大于 5 的&amp;#125;);for( var i = 0; i &amp;lt; filterArray.le">
-<meta property="og:updated_time" content="2015-11-27T08:58:08.998Z">
+<meta property="og:updated_time" content="2015-12-02T11:22:53.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSON 遍历">
 <meta name="twitter:description" content="grep123456789101112var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];var filterArray = $.grep( array, function( value ) &amp;#123;    return value &amp;gt; 5;   // 筛选出大于 5 的&amp;#125;);for( var i = 0; i &amp;lt; filterArray.le">
@@ -307,12 +307,12 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="grep">grep</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> filterArray = $.grep( array, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">5</span>;   <span class="comment">// 筛选出大于 5 的</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; filterArray.length; i++ ) &#123;</span><br><span class="line">    alert( filterArray[i] );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> filterArray ) &#123;</span><br><span class="line">    alert( filterArray[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="each">each</h2><a id="more"></a>
+        <span itemprop="articleBody"><h3 id="grep">grep</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> filterArray = $.grep( array, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">5</span>;   <span class="comment">// 筛选出大于 5 的</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; filterArray.length; i++ ) &#123;</span><br><span class="line">    alert( filterArray[i] );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> filterArray ) &#123;</span><br><span class="line">    alert( filterArray[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="each">each</h3><a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anObject = &#123;one : <span class="number">1</span>, two : <span class="number">2</span>, three : <span class="number">3</span>&#125;;    <span class="comment">// 对 json 数组 each</span></span><br><span class="line">$.each( anObject, <span class="function"><span class="keyword">function</span>(<span class="params"> name, value </span>) </span>&#123;</span><br><span class="line">    alert( name );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line">$.each (anArray, <span class="function"><span class="keyword">function</span>(<span class="params"> n, value </span>) </span>&#123;</span><br><span class="line">    alert( n );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="inArray">inArray</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line"><span class="keyword">var</span> index = $.inArray( <span class="string">'two'</span>, anArray );</span><br><span class="line">alert( index );    <span class="comment">// 返回该值在数组中的键值，返回 1</span></span><br><span class="line">alert( anArray[index] );    <span class="comment">// value is two</span></span><br></pre></td></tr></table></figure>
-<h2 id="map">map</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strings = [<span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'S'</span>, <span class="string">'6'</span>];</span><br><span class="line"><span class="keyword">var</span> values = $.map( strings, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">new</span> <span class="built_in">Number</span>( value );</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">isNaN</span>( result ) ? <span class="literal">null</span> : result;    <span class="comment">// isNaN: is Not a Number 的缩写</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> values ) &#123;</span><br><span class="line">    alert( values[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="JSON_对象">JSON 对象</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = [&#123; dd : <span class="string">'SB'</span>, AA : <span class="string">'东东'</span>, re1 : <span class="number">123</span> &#125;, &#123; cccc : <span class="string">'dd'</span>, lk : <span class="string">'1qw'</span> &#125;];</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>, l = json.length; i &lt; l; i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">var</span> key <span class="keyword">in</span> json[i] )&#123;</span><br><span class="line">        alert( key + <span class="string">':'</span> + json[i][key] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="inArray">inArray</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line"><span class="keyword">var</span> index = $.inArray( <span class="string">'two'</span>, anArray );</span><br><span class="line">alert( index );    <span class="comment">// 返回该值在数组中的键值，返回 1</span></span><br><span class="line">alert( anArray[index] );    <span class="comment">// value is two</span></span><br></pre></td></tr></table></figure>
+<h3 id="map">map</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strings = [<span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'S'</span>, <span class="string">'6'</span>];</span><br><span class="line"><span class="keyword">var</span> values = $.map( strings, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">new</span> <span class="built_in">Number</span>( value );</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">isNaN</span>( result ) ? <span class="literal">null</span> : result;    <span class="comment">// isNaN: is Not a Number 的缩写</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> values ) &#123;</span><br><span class="line">    alert( values[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JSON_对象">JSON 对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = [&#123; dd : <span class="string">'SB'</span>, AA : <span class="string">'东东'</span>, re1 : <span class="number">123</span> &#125;, &#123; cccc : <span class="string">'dd'</span>, lk : <span class="string">'1qw'</span> &#125;];</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>, l = json.length; i &lt; l; i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">var</span> key <span class="keyword">in</span> json[i] )&#123;</span><br><span class="line">        alert( key + <span class="string">':'</span> + json[i][key] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="string">"name"</span> : <span class="string">"冯娟"</span>, <span class="string">"password"</span> : <span class="string">"123456"</span>, <span class="string">"department"</span> : <span class="string">"技术部"</span>, <span class="string">"sex"</span> : <span class="string">"女"</span>, <span class="string">"old"</span> : <span class="number">30</span> &#125;;</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> p <span class="keyword">in</span> obj ) &#123;</span><br><span class="line">    str = str + obj[p] + <span class="string">','</span>;</span><br><span class="line">    <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </span>
       
@@ -333,8 +333,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/03/17/hello-hexo/" rel="next" title="Hello Hexo !">
-                <i class="fa fa-chevron-left"></i> Hello Hexo !
+              <a href="/2014/04/03/text-overflow-ellipsis-in-table/" rel="next" title="在表格中使用 text-overflow ellipsis">
+                <i class="fa fa-chevron-left"></i> 在表格中使用 text-overflow ellipsis
               </a>
             
           </div>
@@ -434,21 +434,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -465,6 +465,24 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/yoonge" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/immonk" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
           
         </div>
 
@@ -487,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#grep"><span class="nav-number">1.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#each"><span class="nav-number">2.</span> <span class="nav-text">each</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#inArray"><span class="nav-number">3.</span> <span class="nav-text">inArray</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">4.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON_对象"><span class="nav-number">5.</span> <span class="nav-text">JSON 对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">1.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#each"><span class="nav-number">2.</span> <span class="nav-text">each</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inArray"><span class="nav-number">3.</span> <span class="nav-text">inArray</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">4.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON_对象"><span class="nav-number">5.</span> <span class="nav-text">JSON 对象</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -559,17 +577,6 @@
     })();
   </script>
     
-     
-     
-  	  <script type="text/javascript">
-  	   var duoshuo_user_ID = 11145759
-       var duoshuo_admin_nickname="Yoonge"
-  	  </script>
-     
-  	<script src="/js/ua-parser.min.js"></script>
-  	<script src="/js/hook-duoshuo.js"></script>
-  
-
 
     
   
