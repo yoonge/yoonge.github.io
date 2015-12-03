@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mac,os x," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -55,19 +55,22 @@
 
 
 
-<meta name="description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta name="description" content="查看本地分支123$ git branch* hexo  master
+查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
+创建本地分支 test">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS X 下开启 root 用户">
-<meta property="og:url" content="http://zyi.tw/2015/04/03/mac-os-x-root/index.html">
+<meta property="og:title" content="Git 远程、本地分支操作">
+<meta property="og:url" content="http://zyi.tw/2014/11/19/git-branch/index.html">
 <meta property="og:site_name" content="zy.i.tw">
-<meta property="og:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
-<meta property="og:updated_time" content="2015-11-27T09:19:17.692Z">
+<meta property="og:description" content="查看本地分支123$ git branch* hexo  master
+查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
+创建本地分支 test">
+<meta property="og:updated_time" content="2015-12-03T03:51:45.255Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS X 下开启 root 用户">
-<meta name="twitter:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta name="twitter:title" content="Git 远程、本地分支操作">
+<meta name="twitter:description" content="查看本地分支123$ git branch* hexo  master
+查看本地和远程分支12345$ git branch -a* hexo  master  remotes/origin/hexo  remotes/origin/master
+创建本地分支 test">
 
 
 
@@ -79,7 +82,7 @@
   };
 </script>
 
-  <title> Mac OS X 下开启 root 用户 | zy.i.tw </title>
+  <title> Git 远程、本地分支操作 | zy.i.tw </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +258,7 @@
             
             
               
-                Mac OS X 下开启 root 用户
+                Git 远程、本地分支操作
               
             
           </h1>
@@ -264,8 +267,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-04-03T18:50:38+08:00" content="2015-04-03">
-              2015-04-03
+            <time itemprop="dateCreated" datetime="2014-11-19T18:26:48+08:00" content="2014-11-19">
+              2014-11-19
             </time>
           </span>
 
@@ -274,8 +277,8 @@
               &nbsp; | &nbsp; In
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -290,8 +293,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/04/03/mac-os-x-root/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/03/mac-os-x-root/" itemprop="commentsCount"></span>
+                <a href="/2014/11/19/git-branch/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/19/git-branch/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -310,14 +313,18 @@
       
 
       
-        <span itemprop="articleBody"><p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
-<p>提示失败，试试 sudo ：</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
-<p>好了，这时再用 su ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
-<p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
+        <span itemprop="articleBody"><h3 id="查看本地分支">查看本地分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
+<h3 id="查看本地和远程分支">查看本地和远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
+<h3 id="创建本地分支_test">创建本地分支 test</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h3 id="切换到本地分支_test">切换到本地分支 test</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout <span class="built_in">test</span></span><br><span class="line">Switched to branch <span class="string">'test'</span></span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h3 id="把本地分支_test_推送到远程分支">把本地分支 test 推送到远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span></span><br><span class="line">Total <span class="number">0</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">* [new branch]    <span class="built_in">test</span> -&gt; <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h3 id="同步本地远程分支">同步本地远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin</span><br></pre></td></tr></table></figure>
+<h3 id="提交本地分支数据到远程分支">提交本地分支数据到远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin <span class="built_in">test</span>:<span class="built_in">test</span>   <span class="comment"># &lt;local_branch_name&gt;:&lt;remote_branch_name&gt;</span></span><br><span class="line">Everything up-to-date</span><br></pre></td></tr></table></figure>
+<p>如果当前处于 test 分支下，也可以直接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<h3 id="删除远程分支_test">删除远程分支 test</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin :<span class="built_in">test</span></span><br><span class="line">To https://github.com/yoonge/yoonge.git</span><br><span class="line">- [deleted]    <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">  hexo</span><br><span class="line">  master</span><br><span class="line">* <span class="built_in">test</span></span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
+<h3 id="删除本地分支_test">删除本地分支 test</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout hexo</span><br><span class="line">Switched to branch <span class="string">'hexo'</span></span><br><span class="line"></span><br><span class="line">$ git branch <span class="operator">-d</span> <span class="built_in">test</span></span><br><span class="line">Deleted branch <span class="built_in">test</span> (was <span class="number">131</span>eba3).</span><br><span class="line"></span><br><span class="line">$ git brach</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -326,9 +333,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mac/" rel="tag">#mac</a>
-          
-            <a href="/tags/os-x/" rel="tag">#os x</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
         </div>
       
@@ -337,16 +342,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/18/yunnan-journey/" rel="next" title="云南之旅">
-                <i class="fa fa-chevron-left"></i> 云南之旅
+              <a href="/2014/09/29/vim-command/" rel="next" title="Vim 命令大全">
+                <i class="fa fa-chevron-left"></i> Vim 命令大全
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/13/nodejs-update/" rel="prev" title="Nodejs Update">
-                Nodejs Update <i class="fa fa-chevron-right"></i>
+              <a href="/2015/03/18/yunnan-journey/" rel="prev" title="云南之旅">
+                云南之旅 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -362,10 +367,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/04/03/mac-os-x-root/"
-     data-title="Mac OS X 下开启 root 用户"
+        <div class="ds-share flat" data-thread-key="2014/11/19/git-branch/"
+     data-title="Git 远程、本地分支操作"
      data-content=""
-     data-url="http://zyi.tw/2015/04/03/mac-os-x-root/">
+     data-url="http://zyi.tw/2014/11/19/git-branch/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
       <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -393,8 +398,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/04/03/mac-os-x-root/"
-           data-title="Mac OS X 下开启 root 用户" data-url="http://zyi.tw/2015/04/03/mac-os-x-root/">
+      <div class="ds-thread" data-thread-key="2014/11/19/git-branch/"
+           data-title="Git 远程、本地分支操作" data-url="http://zyi.tw/2014/11/19/git-branch/">
       </div>
     
   </div>
@@ -509,7 +514,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看本地分支"><span class="nav-number">1.</span> <span class="nav-text">查看本地分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看本地和远程分支"><span class="nav-number">2.</span> <span class="nav-text">查看本地和远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建本地分支_test"><span class="nav-number">3.</span> <span class="nav-text">创建本地分支 test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换到本地分支_test"><span class="nav-number">4.</span> <span class="nav-text">切换到本地分支 test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把本地分支_test_推送到远程分支"><span class="nav-number">5.</span> <span class="nav-text">把本地分支 test 推送到远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步本地远程分支"><span class="nav-number">6.</span> <span class="nav-text">同步本地远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交本地分支数据到远程分支"><span class="nav-number">7.</span> <span class="nav-text">提交本地分支数据到远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除远程分支_test"><span class="nav-number">8.</span> <span class="nav-text">删除远程分支 test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除本地分支_test"><span class="nav-number">9.</span> <span class="nav-text">删除本地分支 test</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
