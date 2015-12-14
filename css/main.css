@@ -1760,11 +1760,12 @@ body {
   margin: 1px 1px !important;
   border: 1px solid #bbb !important;
   color: #fff;
-  display: inline-block !important;
+  display: none !important;
 }
 .theme-next .this_ua.admin {
   background-color: #d9534f !important;
   border-color: #d9534f !important;
+  display: inline-block !important;
 }
 .theme-next .this_ua.platform.iOS,
 .theme-next .this_ua.platform.Mac,
