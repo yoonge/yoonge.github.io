@@ -1760,11 +1760,19 @@ body {
   margin: 1px 1px !important;
   border: 1px solid #bbb !important;
   color: #fff;
+<<<<<<< HEAD
   display: inline-block !important;
+=======
+  display: none !important;
+>>>>>>> 83731ba2937b09e1ed41cba31eacbe7961aa858d
 }
 .theme-next .this_ua.admin {
   background-color: #d9534f !important;
   border-color: #d9534f !important;
+<<<<<<< HEAD
+=======
+  display: inline-block !important;
+>>>>>>> 83731ba2937b09e1ed41cba31eacbe7961aa858d
 }
 .theme-next .this_ua.platform.iOS,
 .theme-next .this_ua.platform.Mac,
