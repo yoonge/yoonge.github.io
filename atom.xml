@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[zy.i.tw]]></title>
+  <title><![CDATA[zy-i-tw]]></title>
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
@@ -68,11 +68,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[云南之旅]]></title>
+    <title><![CDATA[彩云之南]]></title>
     <link href="http://zyi.tw/2015/03/18/yunnan-journey/"/>
     <id>http://zyi.tw/2015/03/18/yunnan-journey/</id>
     <published>2015-03-18T07:53:20.000Z</published>
-    <updated>2015-11-27T13:00:44.954Z</updated>
+    <updated>2015-12-31T13:35:43.231Z</updated>
     <content type="html"><![CDATA[<h3 id="测试传图">测试传图</h3><p><img src="/images/20150318.jpg" alt="云南之旅"></p>
 ]]></content>
     <summary type="html">
@@ -211,6 +211,36 @@
       <category term="array" scheme="http://zyi.tw/tags/array/"/>
     
       <category term="json" scheme="http://zyi.tw/tags/json/"/>
+    
+      <category term="Front-End" scheme="http://zyi.tw/categories/Front-End/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[在表格中使用 text-overflow ellipsis]]></title>
+    <link href="http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/"/>
+    <id>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</id>
+    <published>2014-04-03T02:53:17.000Z</published>
+    <updated>2015-12-03T12:41:40.130Z</updated>
+    <content type="html"><![CDATA[<p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，为 table 增加一个 table-layout: fixed 样式就可以了，简单方便，没有冗余。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于_table-layout_属性">关于 table-layout 属性</h2><a id="more"></a>
+<h3 id="定义和用法">定义和用法</h3><p>table-layout 属性用来定义表格单元格、行、列的算法规则。</p>
+<h3 id="自动表格布局：automatic_（默认）">自动表格布局：automatic （默认）</h3><p>在自动表格布局中，列的宽度是由列单元格中没有折行的最宽的内容设定的。<br>此算法有时会较慢，这是由于它需要在确定最终的布局之前访问表格中所有的内容。</p>
+<h3 id="固定表格布局：fixed">固定表格布局：fixed</h3><p>固定表格布局与自动表格布局相比，允许浏览器更快地对表格进行布局。<br>在固定表格布局中，水平布局仅取决于表格宽度、列宽度、表格边框宽度、单元格间距，而与单元格的内容无关。<br>通过使用固定表格布局，用户代理在接收到第一行后就可以显示表格。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，为 table 增加一个 table-layout: fixed 样式就可以了，简单方便，没有冗余。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于_table-layout_属性">关于 table-layout 属性</h2>]]>
+    
+    </summary>
+    
+      <category term="ellipsis" scheme="http://zyi.tw/tags/ellipsis/"/>
+    
+      <category term="table" scheme="http://zyi.tw/tags/table/"/>
+    
+      <category term="text-overflow" scheme="http://zyi.tw/tags/text-overflow/"/>
     
       <category term="Front-End" scheme="http://zyi.tw/categories/Front-End/"/>
     
