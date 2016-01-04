@@ -16,7 +16,7 @@
 
         {# Not to show title for quote posts that do not have a title #}
         {% if not (is_index and post.type === 'quote' and not post.title) %}
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title {% if is_index %}text-left{% endif %}" itemprop="name headline">
             {# Link posts #}
             {% if post.link %}
               {% if post.sticky > 0 %}
@@ -46,7 +46,7 @@
           </h1>
         {% endif %}
 
-        <div class="post-meta">
+        <div class="post-meta {% if is_index %}text-left{% endif %}">
           <span class="post-time">
             {{ __('post.posted') }}
             <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
@@ -132,7 +132,7 @@
           </div>
         {% elif post.excerpt  %}
           {{ post.excerpt }}
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
