@@ -1985,3 +1985,24 @@ body {
     top: 0 !important;
   }
 }
+.brand.btn {
+  padding: 0 40px;
+}
+.posts-expand .post-title.text-left {
+  text-align: left;
+}
+.posts-expand .post-meta {
+  margin-bottom: 48px;
+}
+.posts-expand .post-meta.text-left {
+  text-align: left;
+}
+.posts-expand .post-tags {
+  text-align: left;
+}
+.posts-expand .post-eof {
+  margin: 120px 0 80px;
+}
+.footer-inner {
+  text-align: left;
+}
