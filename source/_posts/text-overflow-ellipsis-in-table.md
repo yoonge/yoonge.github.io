@@ -6,7 +6,7 @@ tags:
     - ellipsis
 categories: Front-End
 ---
-看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，为 table 增加一个 table-layout: fixed 样式就可以了，简单方便，没有冗余。
+看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，只需为 table 增加一个 table-layout: fixed 样式就可以了。
 
 ``` css
 table {
@@ -16,7 +16,7 @@ td {
     width: 30%;    /* 可以是固定宽度，也可以是百分比 */
     text-overflow: ellipsis;    /* 也可以是 clip */
     white-space: nowrap;    /* 强制不换行 */
-    overflow: hidden;    /* text-overflow 的必要条件 */
+    overflow: hidden;    /* text-overflow 生效的必要条件 */
 }
 ```
 
