@@ -4,7 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-  <updated>2015-11-27T09:11:11.831Z</updated>
+  <updated>2016-01-05T10:59:09.242Z</updated>
   <id>http://zyi.tw/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Github 和 GitCafe 同步托管 Hexo 博客]]></title>
+    <link href="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/"/>
+    <id>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</id>
+    <published>2015-12-24T09:04:53.000Z</published>
+    <updated>2016-01-05T10:59:09.242Z</updated>
+    <content type="html"><![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
+<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 git 全局变量，可以使用以下命令查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config --get user.name</span><br><span class="line">Yoonge</span><br><span class="line"></span><br><span class="line">$ git config --get user.email</span><br><span class="line">yoonge@zyi.tw</span><br></pre></td></tr></table></figure>
+<p>使用以上邮箱和用户名注册 gitcafe。</p>
+<p>设置 git 全局变量可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">'Yoonge'</span></span><br><span class="line"></span><br><span class="line">$ git config --get user.email <span class="string">'yoonge@zyi.tw'</span></span><br></pre></td></tr></table></figure>
+<h3 id="创建_GitCafe_项目">创建 GitCafe 项目</h3><p>参照 gitcafe 官网说明创建一个与用户名相同的项目（我这里是 yoonge），然后进入你的本地 hexo 博客目录下的 .deploy_git 目录，创建 gitcafe-pages 分支，并切换到该分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git branch gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages</span><br><span class="line">Switched to branch <span class="string">'gitcafe-pages'</span></span><br></pre></td></tr></table></figure>
+<p>To be continued…</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— ]]>
+    </summary>
+    
+      <category term="git" scheme="http://zyi.tw/tags/git/"/>
+    
+      <category term="gitcafe" scheme="http://zyi.tw/tags/gitcafe/"/>
+    
+      <category term="github" scheme="http://zyi.tw/tags/github/"/>
+    
+      <category term="hexo" scheme="http://zyi.tw/tags/hexo/"/>
+    
+      <category term="Notes" scheme="http://zyi.tw/categories/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Nodejs Update]]></title>
@@ -221,9 +253,9 @@
     <link href="http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/"/>
     <id>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</id>
     <published>2014-04-03T02:53:17.000Z</published>
-    <updated>2016-01-05T03:36:13.967Z</updated>
+    <updated>2016-01-05T09:01:24.947Z</updated>
     <content type="html"><![CDATA[<p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，只需为 table 增加一个 table-layout: fixed 样式就可以了。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 生效的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="关于_table-layout_属性">关于 table-layout 属性</h2><a id="more"></a>
 <h3 id="定义和用法">定义和用法</h3><p>table-layout 属性用来定义表格单元格、行、列的算法规则。</p>
 <h3 id="自动表格布局：automatic_（默认）">自动表格布局：automatic （默认）</h3><p>在自动表格布局中，列的宽度是由列单元格中没有折行的最宽的内容设定的。<br>此算法有时会较慢，这是由于它需要在确定最终的布局之前访问表格中所有的内容。</p>
@@ -231,7 +263,7 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，只需为 table 增加一个 table-layout: fixed 样式就可以了。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 生效的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="关于_table-layout_属性">关于 table-layout 属性</h2>]]>
     
     </summary>

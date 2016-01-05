@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="array,json," />
+  <meta name="keywords" content="git,gitcafe,github,hexo," />
 
 
 
@@ -55,16 +55,19 @@
 
 
 
-<meta name="description" content="grep123456789101112var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];var filterArray = $.grep( array, function( value ) &amp;#123;    return value &amp;gt; 5;   // 筛选出大于 5 的&amp;#125;);for( var i = 0; i &amp;lt; filterArray.le">
+<meta name="description" content="由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。那么，基于 github 上已经搭建好的 hexo 博客，开始吧：
+注册 GitCafe首先，必须注意">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSON 遍历">
-<meta property="og:url" content="http://zyi.tw/2014/09/19/json-traversal/index.html">
+<meta property="og:title" content="Github 和 GitCafe 同步托管 Hexo 博客">
+<meta property="og:url" content="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/index.html">
 <meta property="og:site_name" content="zy-i-tw">
-<meta property="og:description" content="grep123456789101112var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];var filterArray = $.grep( array, function( value ) &amp;#123;    return value &amp;gt; 5;   // 筛选出大于 5 的&amp;#125;);for( var i = 0; i &amp;lt; filterArray.le">
-<meta property="og:updated_time" content="2015-12-02T11:22:53.181Z">
+<meta property="og:description" content="由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。那么，基于 github 上已经搭建好的 hexo 博客，开始吧：
+注册 GitCafe首先，必须注意">
+<meta property="og:updated_time" content="2016-01-05T10:59:09.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSON 遍历">
-<meta name="twitter:description" content="grep123456789101112var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];var filterArray = $.grep( array, function( value ) &amp;#123;    return value &amp;gt; 5;   // 筛选出大于 5 的&amp;#125;);for( var i = 0; i &amp;lt; filterArray.le">
+<meta name="twitter:title" content="Github 和 GitCafe 同步托管 Hexo 博客">
+<meta name="twitter:description" content="由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。那么，基于 github 上已经搭建好的 hexo 博客，开始吧：
+注册 GitCafe首先，必须注意">
 
 
 
@@ -76,7 +79,7 @@
   };
 </script>
 
-  <title> JSON 遍历 | zy-i-tw </title>
+  <title> Github 和 GitCafe 同步托管 Hexo 博客 | zy-i-tw </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +254,7 @@
             
             
               
-                JSON 遍历
+                Github 和 GitCafe 同步托管 Hexo 博客
               
             
           </h1>
@@ -260,8 +263,8 @@
         <div class="post-meta ">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2014-09-19T19:06:11+08:00" content="2014-09-19">
-              2014-09-19
+            <time itemprop="dateCreated" datetime="2015-12-24T17:04:53+08:00" content="2015-12-24">
+              2015-12-24
             </time>
           </span>
 
@@ -270,8 +273,8 @@
               &nbsp; | &nbsp; In
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Front-End/" itemprop="url" rel="index">
-                    <span itemprop="name">Front-End</span>
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -286,8 +289,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/09/19/json-traversal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/09/19/json-traversal/" itemprop="commentsCount"></span>
+                <a href="/2015/12/24/hexo-both-github-and-gitcafe/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/24/hexo-both-github-and-gitcafe/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,13 +309,15 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="grep">grep</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> filterArray = $.grep( array, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">5</span>;   <span class="comment">// 筛选出大于 5 的</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; filterArray.length; i++ ) &#123;</span><br><span class="line">    alert( filterArray[i] );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> filterArray ) &#123;</span><br><span class="line">    alert( filterArray[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="each">each</h3><a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anObject = &#123;one : <span class="number">1</span>, two : <span class="number">2</span>, three : <span class="number">3</span>&#125;;    <span class="comment">// 对 json 数组 each</span></span><br><span class="line">$.each( anObject, <span class="function"><span class="keyword">function</span>(<span class="params"> name, value </span>) </span>&#123;</span><br><span class="line">    alert( name );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line">$.each (anArray, <span class="function"><span class="keyword">function</span>(<span class="params"> n, value </span>) </span>&#123;</span><br><span class="line">    alert( n );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="inArray">inArray</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line"><span class="keyword">var</span> index = $.inArray( <span class="string">'two'</span>, anArray );</span><br><span class="line">alert( index );    <span class="comment">// 返回该值在数组中的键值，返回 1</span></span><br><span class="line">alert( anArray[index] );    <span class="comment">// value is two</span></span><br></pre></td></tr></table></figure>
-<h3 id="map">map</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strings = [<span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'S'</span>, <span class="string">'6'</span>];</span><br><span class="line"><span class="keyword">var</span> values = $.map( strings, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">new</span> <span class="built_in">Number</span>( value );</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">isNaN</span>( result ) ? <span class="literal">null</span> : result;    <span class="comment">// isNaN: is Not a Number 的缩写</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> values ) &#123;</span><br><span class="line">    alert( values[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="JSON_对象">JSON 对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = [&#123; dd : <span class="string">'SB'</span>, AA : <span class="string">'东东'</span>, re1 : <span class="number">123</span> &#125;, &#123; cccc : <span class="string">'dd'</span>, lk : <span class="string">'1qw'</span> &#125;];</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>, l = json.length; i &lt; l; i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">var</span> key <span class="keyword">in</span> json[i] )&#123;</span><br><span class="line">        alert( key + <span class="string">':'</span> + json[i][key] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="string">"name"</span> : <span class="string">"冯娟"</span>, <span class="string">"password"</span> : <span class="string">"123456"</span>, <span class="string">"department"</span> : <span class="string">"技术部"</span>, <span class="string">"sex"</span> : <span class="string">"女"</span>, <span class="string">"old"</span> : <span class="number">30</span> &#125;;</span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> p <span class="keyword">in</span> obj ) &#123;</span><br><span class="line">    str = str + obj[p] + <span class="string">','</span>;</span><br><span class="line">    <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
+<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 git 全局变量，可以使用以下命令查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config --get user.name</span><br><span class="line">Yoonge</span><br><span class="line"></span><br><span class="line">$ git config --get user.email</span><br><span class="line">yoonge@zyi.tw</span><br></pre></td></tr></table></figure>
+<p>使用以上邮箱和用户名注册 gitcafe。</p>
+<p>设置 git 全局变量可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">'Yoonge'</span></span><br><span class="line"></span><br><span class="line">$ git config --get user.email <span class="string">'yoonge@zyi.tw'</span></span><br></pre></td></tr></table></figure>
+<h3 id="创建_GitCafe_项目">创建 GitCafe 项目</h3><p>参照 gitcafe 官网说明创建一个与用户名相同的项目（我这里是 yoonge），然后进入你的本地 hexo 博客目录下的 .deploy_git 目录，创建 gitcafe-pages 分支，并切换到该分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git branch gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages</span><br><span class="line">Switched to branch <span class="string">'gitcafe-pages'</span></span><br></pre></td></tr></table></figure>
+<p>To be continued…</p>
 </span>
       
     </div>
@@ -321,9 +326,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/array/" rel="tag">#array</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
-            <a href="/tags/json/" rel="tag">#json</a>
+            <a href="/tags/gitcafe/" rel="tag">#gitcafe</a>
+          
+            <a href="/tags/github/" rel="tag">#github</a>
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
           
         </div>
       
@@ -332,17 +341,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/04/03/text-overflow-ellipsis-in-table/" rel="next" title="在表格中使用 text-overflow ellipsis">
-                <i class="fa fa-chevron-left"></i> 在表格中使用 text-overflow ellipsis
+              <a href="/2015/07/13/nodejs-update/" rel="next" title="Nodejs Update">
+                <i class="fa fa-chevron-left"></i> Nodejs Update
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/09/29/vim-command/" rel="prev" title="Vim 命令大全">
-                Vim 命令大全 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -357,10 +362,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2014/09/19/json-traversal/"
-     data-title="JSON 遍历"
+        <div class="ds-share flat" data-thread-key="2015/12/24/hexo-both-github-and-gitcafe/"
+     data-title="Github 和 GitCafe 同步托管 Hexo 博客"
      data-content=""
-     data-url="http://zyi.tw/2014/09/19/json-traversal/">
+     data-url="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
       <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -388,8 +393,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/09/19/json-traversal/"
-           data-title="JSON 遍历" data-url="http://zyi.tw/2014/09/19/json-traversal/">
+      <div class="ds-thread" data-thread-key="2015/12/24/hexo-both-github-and-gitcafe/"
+           data-title="Github 和 GitCafe 同步托管 Hexo 博客" data-url="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/">
       </div>
     
   </div>
@@ -504,7 +509,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">1.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#each"><span class="nav-number">2.</span> <span class="nav-text">each</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inArray"><span class="nav-number">3.</span> <span class="nav-text">inArray</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">4.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON_对象"><span class="nav-number">5.</span> <span class="nav-text">JSON 对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册_GitCafe"><span class="nav-number">1.</span> <span class="nav-text">注册 GitCafe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建_GitCafe_项目"><span class="nav-number">2.</span> <span class="nav-text">创建 GitCafe 项目</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
