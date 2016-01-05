@@ -116,7 +116,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/"  class="btn brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">zy-i-tw</span>
       <span class="logo-line-after"><i></i></span>
@@ -223,7 +223,6 @@
     </div>
   
 </nav>
-
  </div>
     </header>
 
@@ -264,7 +263,118 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/24/hexo-both-github-and-gitcafe/" itemprop="url">
+                  Github 和 GitCafe 同步托管 Hexo 博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta text-left">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2015-12-24T17:04:53+08:00" content="2015-12-24">
+              2015-12-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/24/hexo-both-github-and-gitcafe/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/24/hexo-both-github-and-gitcafe/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
+<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 git 全局变量，可以使用以下命令查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config --get user.name</span><br><span class="line">Yoonge</span><br><span class="line"></span><br><span class="line">$ git config --get user.email</span><br><span class="line">yoonge@zyi.tw</span><br></pre></td></tr></table></figure>
+<p>使用以上邮箱和用户名注册 gitcafe。</p>
+<p>设置 git 全局变量可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">'Yoonge'</span></span><br><span class="line"></span><br><span class="line">$ git config --get user.email <span class="string">'yoonge@zyi.tw'</span></span><br></pre></td></tr></table></figure>
+<h3 id="创建_GitCafe_项目">创建 GitCafe 项目</h3><p>参照 gitcafe 官网说明创建一个与用户名相同的项目（我这里是 yoonge），然后进入你的本地 hexo 博客目录下的 .deploy_git 目录，创建 gitcafe-pages 分支，并切换到该分支：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git branch gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages</span><br><span class="line">Switched to branch <span class="string">'gitcafe-pages'</span></span><br></pre></td></tr></table></figure>
+<p>To be continued…</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -277,7 +387,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2015-07-13T17:49:22+08:00" content="2015-07-13">
@@ -371,7 +481,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -384,7 +494,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2015-04-03T18:50:38+08:00" content="2015-04-03">
@@ -437,7 +547,7 @@
           <p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
 <p>提示失败，试试 sudo ：</p>
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="/2015/04/03/mac-os-x-root/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -476,7 +586,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -489,7 +599,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2015-03-18T15:53:20+08:00" content="2015-03-18">
@@ -579,7 +689,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -592,7 +702,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2014-11-20T18:26:48+08:00" content="2014-11-20">
@@ -645,7 +755,7 @@
           <h3 id="查看本地分支">查看本地分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 <h3 id="查看本地和远程分支">查看本地和远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
 <h3 id="创建本地分支_test">创建本地分支 test</h3>
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="/2014/11/20/git-branch/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -684,7 +794,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -697,7 +807,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2014-09-29T13:44:31+08:00" content="2014-09-29">
@@ -751,7 +861,7 @@
 <h3 id="启动_vim">启动 vim</h3><p>在命令行窗口中输入以下命令即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim    <span class="comment"># 直接启动 vim</span></span><br><span class="line">vim filename    <span class="comment"># 打开 vim 并创建名为 filename 的文件</span></span><br></pre></td></tr></table></figure>
 <h3 id="文件命令">文件命令</h3>
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="/2014/09/29/vim-command/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -790,7 +900,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -803,7 +913,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2014-09-19T19:06:11+08:00" content="2014-09-19">
@@ -855,7 +965,7 @@
         
           <h3 id="grep">grep</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> filterArray = $.grep( array, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">5</span>;   <span class="comment">// 筛选出大于 5 的</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; filterArray.length; i++ ) &#123;</span><br><span class="line">    alert( filterArray[i] );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> filterArray ) &#123;</span><br><span class="line">    alert( filterArray[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="each">each</h3>
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="/2014/09/19/json-traversal/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -894,7 +1004,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -907,7 +1017,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2014-04-03T10:53:17+08:00" content="2014-04-03">
@@ -957,10 +1067,10 @@
 
       
         
-          <p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，为 table 增加一个 table-layout: fixed 样式就可以了，简单方便，没有冗余。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+          <p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，只需为 table 增加一个 table-layout: fixed 样式就可以了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 生效的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="关于_table-layout_属性">关于 table-layout 属性</h2>
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="/2014/04/03/text-overflow-ellipsis-in-table/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -999,7 +1109,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title text-left" itemprop="name headline">
             
             
               
@@ -1012,7 +1122,7 @@
           </h1>
         
 
-        <div class="post-meta">
+        <div class="post-meta text-left">
           <span class="post-time">
             Posted on
             <time itemprop="dateCreated" datetime="2014-03-17T16:16:22+08:00" content="2014-03-17">
@@ -1066,7 +1176,7 @@
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run_server">Run server</h3>
-          <div class="post-more-link text-center">
+          <div class="post-more-link">
             <a class="btn" href="/2014/03/17/hello-hexo/#more" rel="contents">
               Read more &raquo;
             </a>
@@ -1131,7 +1241,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1145,7 +1255,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -1206,7 +1316,7 @@
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

@@ -42,5 +42,6 @@ function show_ua(string) {
 	if (sua.os.version == 'x86_64') {
 		sua.os.version = 'x64';
 	}
-	return '<span class="this_ua platform ' + sua.os.name + '">' + sua.os.name + ' ' + sua.os.version + '</span><span class="this_ua browser ' + sua.browser.name + '">' + sua.browser.name + ' | ' + sua.browser.version + '</span>';
+	return '';
+	//return '<span class="this_ua platform ' + sua.os.name + '">' + sua.os.name + ' ' + sua.os.version + '</span><span class="this_ua browser ' + sua.browser.name + '">' + sua.browser.name + ' | ' + sua.browser.version + '</span>';
 }

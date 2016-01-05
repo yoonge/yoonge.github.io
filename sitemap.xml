@@ -2,58 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zyi.tw/2015/03/18/yunnan-journey/</loc>
-    <lastmod>2015-12-31T13:35:43.231Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</loc>
-    <lastmod>2015-12-03T12:41:40.130Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/09/29/vim-command/</loc>
-    <lastmod>2015-11-27T12:41:45.362Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
-    <lastmod>2015-11-27T12:40:49.714Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/11/20/git-branch/</loc>
-    <lastmod>2015-11-27T12:40:26.069Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/04/03/mac-os-x-root/</loc>
-    <lastmod>2015-11-27T12:37:49.725Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/07/13/nodejs-update/</loc>
-    <lastmod>2015-11-27T12:37:49.725Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/03/17/hello-hexo/</loc>
-    <lastmod>2015-11-27T12:37:49.724Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/404.html</loc>
-    <lastmod>2015-11-09T14:10:55.073Z</lastmod>
+    <loc>http://zyi.tw/tags/index.html</loc>
+    <lastmod>2016-01-05T13:27:04.642Z</lastmod>
   </url>
   
   <url>
     <loc>http://zyi.tw/categories/index.html</loc>
-    <lastmod>2015-11-09T13:30:19.734Z</lastmod>
+    <lastmod>2016-01-05T13:27:04.635Z</lastmod>
   </url>
   
   <url>
-    <loc>http://zyi.tw/tags/index.html</loc>
-    <lastmod>2015-11-09T13:24:13.293Z</lastmod>
+    <loc>http://zyi.tw/2015/03/18/yunnan-journey/</loc>
+    <lastmod>2016-01-05T13:27:04.634Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2014/09/29/vim-command/</loc>
+    <lastmod>2016-01-05T13:27:04.633Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2015/07/13/nodejs-update/</loc>
+    <lastmod>2016-01-05T13:27:04.367Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</loc>
+    <lastmod>2016-01-05T13:27:04.367Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2015/04/03/mac-os-x-root/</loc>
+    <lastmod>2016-01-05T13:27:04.366Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
+    <lastmod>2016-01-05T13:27:04.366Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2014/03/17/hello-hexo/</loc>
+    <lastmod>2016-01-05T13:27:04.247Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</loc>
+    <lastmod>2016-01-05T13:27:04.247Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/2014/11/20/git-branch/</loc>
+    <lastmod>2016-01-05T13:27:04.204Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zyi.tw/404.html</loc>
+    <lastmod>2016-01-05T13:27:04.142Z</lastmod>
   </url>
   
 </urlset>
