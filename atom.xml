@@ -4,11 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-<<<<<<< HEAD
   <updated>2016-01-06T04:08:20.004Z</updated>
-=======
-  <updated>2016-01-05T13:27:04.247Z</updated>
->>>>>>> ce3c2ec17228b18144d3510dc0872140e7b4920e
   <id>http://zyi.tw/</id>
   
   <author>
@@ -23,16 +19,10 @@
     <link href="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/"/>
     <id>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</id>
     <published>2015-12-24T09:04:53.000Z</published>
-<<<<<<< HEAD
     <updated>2016-01-06T04:08:20.004Z</updated>
     <content type="html"><![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，国外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
 <h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 user.name 和 user.email，可以使用以下命令查看：</p>
 <a id="more"></a>
-=======
-    <updated>2016-01-05T13:27:04.247Z</updated>
-    <content type="html"><![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
-<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 git 全局变量，可以使用以下命令查看：</p>
->>>>>>> ce3c2ec17228b18144d3510dc0872140e7b4920e
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config --get user.name</span><br><span class="line">Yoonge</span><br><span class="line"></span><br><span class="line">$ git config --get user.email</span><br><span class="line">yoonge@zyi.tw</span><br></pre></td></tr></table></figure>
 <p>然后使用以上邮箱和用户名注册 gitcafe。</p>
 <p>设置 git 全局变量可以使用以下命令：</p>

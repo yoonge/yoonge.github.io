@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-<<<<<<< HEAD
     <loc>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</loc>
     <lastmod>2016-01-06T04:08:20.004Z</lastmod>
   </url>
@@ -28,76 +27,6 @@
   </url>
   
   <url>
-<<<<<<< HEAD
-    <loc>http://zyi.tw/2015/07/13/nodejs-update/</loc>
-=======
-    <loc>http://zyi.tw/tags/index.html</loc>
-    <lastmod>2016-01-05T13:27:04.642Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/categories/index.html</loc>
-    <lastmod>2016-01-05T13:27:04.635Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/03/18/yunnan-journey/</loc>
-    <lastmod>2016-01-05T13:27:04.634Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/09/29/vim-command/</loc>
-    <lastmod>2016-01-05T13:27:04.633Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/07/13/nodejs-update/</loc>
-    <lastmod>2016-01-05T13:27:04.367Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</loc>
->>>>>>> ce3c2ec17228b18144d3510dc0872140e7b4920e
-    <lastmod>2016-01-05T13:27:04.367Z</lastmod>
-  </url>
-  
-  <url>
-<<<<<<< HEAD
-    <loc>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</loc>
-    <lastmod>2016-01-05T13:27:04.367Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/04/03/mac-os-x-root/</loc>
-=======
-    <loc>http://zyi.tw/2015/04/03/mac-os-x-root/</loc>
-    <lastmod>2016-01-05T13:27:04.366Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
->>>>>>> ce3c2ec17228b18144d3510dc0872140e7b4920e
-    <lastmod>2016-01-05T13:27:04.366Z</lastmod>
-  </url>
-  
-  <url>
-<<<<<<< HEAD
-    <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
-    <lastmod>2016-01-05T13:27:04.366Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2014/03/17/hello-hexo/</loc>
-=======
-    <loc>http://zyi.tw/2014/03/17/hello-hexo/</loc>
-    <lastmod>2016-01-05T13:27:04.247Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</loc>
->>>>>>> ce3c2ec17228b18144d3510dc0872140e7b4920e
-    <lastmod>2016-01-05T13:27:04.247Z</lastmod>
-=======
     <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
     <lastmod>2015-12-02T11:22:53.181Z</lastmod>
   </url>
@@ -120,7 +49,6 @@
   <url>
     <loc>http://zyi.tw/tags/index.html</loc>
     <lastmod>2015-11-10T03:04:56.240Z</lastmod>
->>>>>>> master
   </url>
   
   <url>
