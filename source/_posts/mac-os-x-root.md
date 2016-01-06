@@ -3,6 +3,8 @@ date: 2015-04-03 18:50:38
 tags:
     - mac
     - os x
+    - root
+    - unix
 categories: Unix
 ---
 在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。
