@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mac,os x," />
+  <meta name="keywords" content="regedit,sublime text,windows," />
 
 
 
@@ -55,19 +55,28 @@
 
 
 
-<meta name="description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta name="description" content="经常右键编辑文件，右键菜单里居然找不到 Sublime Text，不能忍，果断祭出注册表大法：
+
+打开注册表：Win + R 打开运行对话框，输入 regedit，回车；
+找到 HKEY_CLASSES_ROOT → * → shell，邮件新建项，命名为 Sublime Text 2；
+再在 Sublime Text 2 上右键新建字符串值，命名为 Icon，值为 “Sublime Text 2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS X 下开启 root 用户">
-<meta property="og:url" content="http://zyi.tw/2015/04/03/mac-os-x-root/index.html">
+<meta property="og:title" content="将 Sublime Text 添加到右键菜单">
+<meta property="og:url" content="http://zyi.tw/2014/12/25/add-sublime-text-to-right-click-menu/index.html">
 <meta property="og:site_name" content="zy-i-tw">
-<meta property="og:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
-<meta property="og:updated_time" content="2015-11-27T09:19:17.692Z">
+<meta property="og:description" content="经常右键编辑文件，右键菜单里居然找不到 Sublime Text，不能忍，果断祭出注册表大法：
+
+打开注册表：Win + R 打开运行对话框，输入 regedit，回车；
+找到 HKEY_CLASSES_ROOT → * → shell，邮件新建项，命名为 Sublime Text 2；
+再在 Sublime Text 2 上右键新建字符串值，命名为 Icon，值为 “Sublime Text 2">
+<meta property="og:updated_time" content="2016-01-06T08:12:45.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS X 下开启 root 用户">
-<meta name="twitter:description" content="在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：
-1234567$ passwd rootChanging password for root.Old Password:New Password:Retype New Password:passwd:">
+<meta name="twitter:title" content="将 Sublime Text 添加到右键菜单">
+<meta name="twitter:description" content="经常右键编辑文件，右键菜单里居然找不到 Sublime Text，不能忍，果断祭出注册表大法：
+
+打开注册表：Win + R 打开运行对话框，输入 regedit，回车；
+找到 HKEY_CLASSES_ROOT → * → shell，邮件新建项，命名为 Sublime Text 2；
+再在 Sublime Text 2 上右键新建字符串值，命名为 Icon，值为 “Sublime Text 2">
 
 
 
@@ -79,7 +88,7 @@
   };
 </script>
 
-  <title> Mac OS X 下开启 root 用户 | zy-i-tw </title>
+  <title> 将 Sublime Text 添加到右键菜单 | zy-i-tw </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +263,7 @@
             
             
               
-                Mac OS X 下开启 root 用户
+                将 Sublime Text 添加到右键菜单
               
             
           </h1>
@@ -263,8 +272,8 @@
         <div class="post-meta ">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-04-03T18:50:38+08:00" content="2015-04-03">
-              2015-04-03
+            <time itemprop="dateCreated" datetime="2014-12-25T11:56:30+08:00" content="2014-12-25">
+              2014-12-25
             </time>
           </span>
 
@@ -273,8 +282,8 @@
               &nbsp; | &nbsp; In
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Unix/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix</span>
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
                   </a>
                 </span>
 
@@ -289,8 +298,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/04/03/mac-os-x-root/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/03/mac-os-x-root/" itemprop="commentsCount"></span>
+                <a href="/2014/12/25/add-sublime-text-to-right-click-menu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/25/add-sublime-text-to-right-click-menu/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -309,14 +318,20 @@
       
 
       
-        <span itemprop="articleBody"><p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
-<p>提示失败，试试 sudo ：</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br></pre></td></tr></table></figure>
-<p>好了，这时再用 su ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ su</span><br><span class="line">Password:</span><br></pre></td></tr></table></figure>
-<p>搞定。<br>使用 root 完毕，用 exit 退出即可。</p>
+        <span itemprop="articleBody"><p>经常右键编辑文件，右键菜单里居然找不到 Sublime Text，不能忍，果断祭出注册表大法：</p>
+<ol>
+<li>打开注册表：Win + R 打开运行对话框，输入 regedit，回车；</li>
+<li>找到 HKEY_CLASSES_ROOT → * → shell，邮件新建<strong>项</strong>，命名为 Sublime Text 2；</li>
+<li><p>再在 Sublime Text 2 上右键新建<strong>字符串值</strong>，命名为 Icon，值为 “Sublime Text 2 所在的路径,0”，比如我这里就是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files (x86)\Sublime Text <span class="number">2</span>\sublime_text.exe,<span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后在 Sublime Text 2 下面新建<strong>项</strong> command，双击<strong>默认</strong>，输入值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files (x86)\Sublime Text <span class="number">2</span>\sublime_text.exe %<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭注册表，不用重启，即刻生效。</p>
+</li>
+</ol>
+<p>赶紧随便找个文本文件试试，Sublime Text 2 果然已经出现在了右键菜单，还带图标呢 ：）</p>
 </span>
       
     </div>
@@ -325,9 +340,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mac/" rel="tag">#mac</a>
+            <a href="/tags/regedit/" rel="tag">#regedit</a>
           
-            <a href="/tags/os-x/" rel="tag">#os x</a>
+            <a href="/tags/sublime-text/" rel="tag">#sublime text</a>
+          
+            <a href="/tags/windows/" rel="tag">#windows</a>
           
         </div>
       
@@ -336,16 +353,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/03/18/yunnan-journey/" rel="next" title="彩云之南">
-                <i class="fa fa-chevron-left"></i> 彩云之南
+              <a href="/2014/11/20/git-branch/" rel="next" title="Git 远程、本地分支操作">
+                <i class="fa fa-chevron-left"></i> Git 远程、本地分支操作
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/13/nodejs-update/" rel="prev" title="Nodejs Update">
-                Nodejs Update <i class="fa fa-chevron-right"></i>
+              <a href="/2015/03/18/yunnan-journey/" rel="prev" title="彩云之南">
+                彩云之南 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -361,10 +378,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/04/03/mac-os-x-root/"
-     data-title="Mac OS X 下开启 root 用户"
+        <div class="ds-share flat" data-thread-key="2014/12/25/add-sublime-text-to-right-click-menu/"
+     data-title="将 Sublime Text 添加到右键菜单"
      data-content=""
-     data-url="http://zyi.tw/2015/04/03/mac-os-x-root/">
+     data-url="http://zyi.tw/2014/12/25/add-sublime-text-to-right-click-menu/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
       <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
@@ -392,8 +409,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/04/03/mac-os-x-root/"
-           data-title="Mac OS X 下开启 root 用户" data-url="http://zyi.tw/2015/04/03/mac-os-x-root/">
+      <div class="ds-thread" data-thread-key="2014/12/25/add-sublime-text-to-right-click-menu/"
+           data-title="将 Sublime Text 添加到右键菜单" data-url="http://zyi.tw/2014/12/25/add-sublime-text-to-right-click-menu/">
       </div>
     
   </div>

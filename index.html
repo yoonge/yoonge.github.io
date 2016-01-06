@@ -678,6 +678,122 @@
             
               
                 
+                <a class="post-title-link" href="/2014/12/25/add-sublime-text-to-right-click-menu/" itemprop="url">
+                  将 Sublime Text 添加到右键菜单
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta text-left">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2014-12-25T11:56:30+08:00" content="2014-12-25">
+              2014-12-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/12/25/add-sublime-text-to-right-click-menu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/25/add-sublime-text-to-right-click-menu/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>经常右键编辑文件，右键菜单里居然找不到 Sublime Text，不能忍，果断祭出注册表大法：</p>
+<ol>
+<li>打开注册表：Win + R 打开运行对话框，输入 regedit，回车；</li>
+<li>找到 HKEY_CLASSES_ROOT → * → shell，邮件新建<strong>项</strong>，命名为 Sublime Text 2；</li>
+<li><p>再在 Sublime Text 2 上右键新建<strong>字符串值</strong>，命名为 Icon，值为 “Sublime Text 2 所在的路径,0”，比如我这里就是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files (x86)\Sublime Text <span class="number">2</span>\sublime_text.exe,<span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后在 Sublime Text 2 下面新建<strong>项</strong> command，双击<strong>默认</strong>，输入值：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Program Files (x86)\Sublime Text <span class="number">2</span>\sublime_text.exe %<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭注册表，不用重启，即刻生效。</p>
+</li>
+</ol>
+<p>赶紧随便找个文本文件试试，Sublime Text 2 果然已经出现在了右键菜单，还带图标呢 ：）</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title text-left" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2014/11/20/git-branch/" itemprop="url">
                   Git 远程、本地分支操作
                 </a>
@@ -1225,7 +1341,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1239,7 +1355,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
