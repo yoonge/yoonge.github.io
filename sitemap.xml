@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zyi.tw/2015/04/03/mac-os-x-root/</loc>
+    <lastmod>2016-01-06T09:05:04.583Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zyi.tw/2014/12/25/add-sublime-text-to-right-click-menu/</loc>
     <lastmod>2016-01-06T08:12:45.503Z</lastmod>
   </url>
@@ -34,11 +39,6 @@
   <url>
     <loc>http://zyi.tw/2014/09/19/json-traversal/</loc>
     <lastmod>2015-12-02T11:22:53.181Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/04/03/mac-os-x-root/</loc>
-    <lastmod>2015-11-27T09:19:17.692Z</lastmod>
   </url>
   
   <url>
