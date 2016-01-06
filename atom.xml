@@ -80,7 +80,7 @@
     <link href="http://zyi.tw/2015/07/13/nodejs-update/"/>
     <id>http://zyi.tw/2015/07/13/nodejs-update/</id>
     <published>2015-07-13T09:49:22.000Z</published>
-    <updated>2016-01-05T13:27:04.367Z</updated>
+    <updated>2015-11-27T09:11:11.831Z</updated>
     <content type="html"><![CDATA[<p>更新已经安装的 npm 库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update –g</span><br></pre></td></tr></table></figure>
 <p>更新 Nodejs 自身（非 windows ）</p>
@@ -103,7 +103,7 @@
     <link href="http://zyi.tw/2015/04/03/mac-os-x-root/"/>
     <id>http://zyi.tw/2015/04/03/mac-os-x-root/</id>
     <published>2015-04-03T10:50:38.000Z</published>
-    <updated>2016-01-05T13:27:04.366Z</updated>
+    <updated>2015-11-27T09:19:17.692Z</updated>
     <content type="html"><![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
 <p>提示失败，试试 sudo ：</p>
@@ -133,7 +133,7 @@
     <link href="http://zyi.tw/2015/03/18/yunnan-journey/"/>
     <id>http://zyi.tw/2015/03/18/yunnan-journey/</id>
     <published>2015-03-18T07:53:20.000Z</published>
-    <updated>2016-01-05T13:27:04.634Z</updated>
+    <updated>2015-12-31T03:21:18.331Z</updated>
     <content type="html"><![CDATA[<h3 id="测试传图">测试传图</h3><p><img src="/images/20150318.jpg" alt="云南之旅"></p>
 ]]></content>
     <summary type="html">
@@ -154,7 +154,7 @@
     <link href="http://zyi.tw/2014/11/20/git-branch/"/>
     <id>http://zyi.tw/2014/11/20/git-branch/</id>
     <published>2014-11-20T10:26:48.000Z</published>
-    <updated>2016-01-05T13:27:04.204Z</updated>
+    <updated>2015-12-03T03:55:28.768Z</updated>
     <content type="html"><![CDATA[<h3 id="查看本地分支">查看本地分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 <h3 id="查看本地和远程分支">查看本地和远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
 <h3 id="创建本地分支_test">创建本地分支 test</h3><a id="more"></a>
@@ -186,7 +186,7 @@
     <link href="http://zyi.tw/2014/09/29/vim-command/"/>
     <id>http://zyi.tw/2014/09/29/vim-command/</id>
     <published>2014-09-29T05:44:31.000Z</published>
-    <updated>2016-01-05T13:27:04.633Z</updated>
+    <updated>2015-12-02T11:22:53.182Z</updated>
     <content type="html"><![CDATA[<h3 id="命令历史">命令历史</h3><p>以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。</p>
 <h3 id="启动_vim">启动 vim</h3><p>在命令行窗口中输入以下命令即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim    <span class="comment"># 直接启动 vim</span></span><br><span class="line">vim filename    <span class="comment"># 打开 vim 并创建名为 filename 的文件</span></span><br></pre></td></tr></table></figure>
@@ -254,7 +254,7 @@
     <link href="http://zyi.tw/2014/09/19/json-traversal/"/>
     <id>http://zyi.tw/2014/09/19/json-traversal/</id>
     <published>2014-09-19T11:06:11.000Z</published>
-    <updated>2016-01-05T13:27:04.366Z</updated>
+    <updated>2015-12-02T11:22:53.181Z</updated>
     <content type="html"><![CDATA[<h3 id="grep">grep</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> filterArray = $.grep( array, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">5</span>;   <span class="comment">// 筛选出大于 5 的</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; filterArray.length; i++ ) &#123;</span><br><span class="line">    alert( filterArray[i] );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> filterArray ) &#123;</span><br><span class="line">    alert( filterArray[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="each">each</h3><a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anObject = &#123;one : <span class="number">1</span>, two : <span class="number">2</span>, three : <span class="number">3</span>&#125;;    <span class="comment">// 对 json 数组 each</span></span><br><span class="line">$.each( anObject, <span class="function"><span class="keyword">function</span>(<span class="params"> name, value </span>) </span>&#123;</span><br><span class="line">    alert( name );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line">$.each (anArray, <span class="function"><span class="keyword">function</span>(<span class="params"> n, value </span>) </span>&#123;</span><br><span class="line">    alert( n );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -282,7 +282,7 @@
     <link href="http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/"/>
     <id>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</id>
     <published>2014-04-03T02:53:17.000Z</published>
-    <updated>2016-01-05T13:27:04.367Z</updated>
+    <updated>2016-01-05T09:01:24.947Z</updated>
     <content type="html"><![CDATA[<p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，只需为 table 增加一个 table-layout: fixed 样式就可以了。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 生效的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="关于_table-layout_属性">关于 table-layout 属性</h2><a id="more"></a>
@@ -312,7 +312,7 @@
     <link href="http://zyi.tw/2014/03/17/hello-hexo/"/>
     <id>http://zyi.tw/2014/03/17/hello-hexo/</id>
     <published>2014-03-17T08:16:22.000Z</published>
-    <updated>2016-01-05T13:27:04.247Z</updated>
+    <updated>2015-11-27T08:07:50.159Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> ! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
