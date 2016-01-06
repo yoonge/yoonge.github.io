@@ -4,7 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-  <updated>2016-01-05T10:59:09.242Z</updated>
+  <updated>2016-01-06T04:08:20.004Z</updated>
   <id>http://zyi.tw/</id>
   
   <author>
@@ -19,19 +19,38 @@
     <link href="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/"/>
     <id>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</id>
     <published>2015-12-24T09:04:53.000Z</published>
-    <updated>2016-01-05T10:59:09.242Z</updated>
-    <content type="html"><![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
-<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 git 全局变量，可以使用以下命令查看：</p>
+    <updated>2016-01-06T04:08:20.004Z</updated>
+    <content type="html"><![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，国外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
+<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 user.name 和 user.email，可以使用以下命令查看：</p>
+<a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config --get user.name</span><br><span class="line">Yoonge</span><br><span class="line"></span><br><span class="line">$ git config --get user.email</span><br><span class="line">yoonge@zyi.tw</span><br></pre></td></tr></table></figure>
-<p>使用以上邮箱和用户名注册 gitcafe。</p>
+<p>然后使用以上邮箱和用户名注册 gitcafe。</p>
 <p>设置 git 全局变量可以使用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">'Yoonge'</span></span><br><span class="line"></span><br><span class="line">$ git config --get user.email <span class="string">'yoonge@zyi.tw'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">'Yoonge'</span></span><br><span class="line"></span><br><span class="line">$ git config --global user.email <span class="string">'yoonge@zyi.tw'</span></span><br></pre></td></tr></table></figure>
 <h3 id="创建_GitCafe_项目">创建 GitCafe 项目</h3><p>参照 gitcafe 官网说明创建一个与用户名相同的项目（我这里是 yoonge），然后进入你的本地 hexo 博客目录下的 .deploy_git 目录，创建 gitcafe-pages 分支，并切换到该分支：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git branch gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git branch</span><br><span class="line">* master</span><br><span class="line">  gitcafe-pages</span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages</span><br><span class="line">Switched to branch <span class="string">'gitcafe-pages'</span></span><br></pre></td></tr></table></figure>
-<p>To be continued…</p>
+<p>然后添加 gitcafe 的远程仓库，并 push 到该仓库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin <span class="string">'git@gitcafe.com:yoonge/yoonge.git'</span></span><br><span class="line"></span><br><span class="line">$ git push origin gitcafe-pages</span><br></pre></td></tr></table></figure>
+<h3 id="同步更新博客到_Github_和_GitCafe">同步更新博客到 Github 和 GitCafe</h3><p>同样在 github 上搭建 hexo 博客的时候已经设置过 _config.yml：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repository: https://github.com/yoonge/yoonge.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p>那么每次博客有更新的时候，只需要在你本地 hexo 博客目录下执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g    // 确保 .deploy_git 目录当前处于 master 分支</span><br></pre></td></tr></table></figure>
+<p>就可以直接将更新提交到 github。然后进入该目录下的 .deploy_git 目录，执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> .deploy_git    // 进入 .deploy_git 目录</span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages    // 切换到 gitcafe-pages 分支</span><br><span class="line"></span><br><span class="line">$ git merge master    // 将 master 分支合并到当前所在的 gitcafe-pages 分支</span><br><span class="line"></span><br><span class="line">$ git push origin gitcafe-pages    // 将 gitcafe-pages 分支提交到 gitcafe 远程仓库</span><br><span class="line"></span><br><span class="line">$ git checkout master // 完事儿切换回 master 分支，确保博客下次更新时 .deploy_git 目录处于 master 分支</span><br></pre></td></tr></table></figure>
+<p>这样就实现了 gitcafe 与 github 博客同步更新。当然，如果觉得每次提交需要执行这么多命令，可以写个复合命令别名添加到 .bashrc 文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexoall = <span class="string">'hexo d -g &amp;&amp; cd .deploy_git &amp;&amp; git checkout gitcafe-pages &amp;&amp; git merge master &amp;&amp; git push origin gitcafe-pages &amp;&amp; git checkout master &amp;&amp; cd ..'</span></span><br></pre></td></tr></table></figure>
+<p>这样以后博客有更新，只需要在你本地 hexo 博客目录下执行 hexoall 就可以了。</p>
+<h3 id="设置访问线路">设置访问线路</h3><p>如果有自己的域名，推荐使用 dnspod 提供的域名解析服务：</p>
+<ol>
+<li>添加两条 CNAME 记录，主机记录分别为 @ 和 www，线路类型默认，记录值均为 gitcafe.io. （注意最后有个点，你不加的话也没关系，dnspod 会自动为你添加）；</li>
+<li>添加四条 A 记录，主机记录分别为 @ 和 www，线路类型国外，记录值分别为 192.30.252.153 和 192.30.252.154 。</li>
+</ol>
+<p>等待设置生效，再刷新博客看下，有没有感觉快多了 :)</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，海外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— ]]>
+    <![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，国外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
+<h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 user.name 和 user.email，可以使用以下命令查看：</p>]]>
+    
     </summary>
     
       <category term="git" scheme="http://zyi.tw/tags/git/"/>
@@ -51,7 +70,7 @@
     <link href="http://zyi.tw/2015/07/13/nodejs-update/"/>
     <id>http://zyi.tw/2015/07/13/nodejs-update/</id>
     <published>2015-07-13T09:49:22.000Z</published>
-    <updated>2015-11-27T09:11:11.831Z</updated>
+    <updated>2016-01-05T13:27:04.367Z</updated>
     <content type="html"><![CDATA[<p>更新已经安装的 npm 库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update –g</span><br></pre></td></tr></table></figure>
 <p>更新 Nodejs 自身（非 windows ）</p>
@@ -74,7 +93,7 @@
     <link href="http://zyi.tw/2015/04/03/mac-os-x-root/"/>
     <id>http://zyi.tw/2015/04/03/mac-os-x-root/</id>
     <published>2015-04-03T10:50:38.000Z</published>
-    <updated>2015-11-27T09:19:17.692Z</updated>
+    <updated>2016-01-05T13:27:04.366Z</updated>
     <content type="html"><![CDATA[<p>在 Mac OS X 下使用 su 指令想暂时切入 root 用户下，输入密码会发现无法登陆 root 用户。<br>这是因为默认情况下 root 用户密码未被设置，需要先用 passwd 命令来设置一下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ passwd root</span><br><span class="line"></span><br><span class="line">Changing password <span class="keyword">for</span> root.</span><br><span class="line">Old Password:</span><br><span class="line">New Password:</span><br><span class="line">Retype New Password:</span><br><span class="line">passwd: authentication token failure</span><br></pre></td></tr></table></figure>
 <p>提示失败，试试 sudo ：</p>
@@ -104,7 +123,7 @@
     <link href="http://zyi.tw/2015/03/18/yunnan-journey/"/>
     <id>http://zyi.tw/2015/03/18/yunnan-journey/</id>
     <published>2015-03-18T07:53:20.000Z</published>
-    <updated>2015-12-31T03:21:18.331Z</updated>
+    <updated>2016-01-05T13:27:04.634Z</updated>
     <content type="html"><![CDATA[<h3 id="测试传图">测试传图</h3><p><img src="/images/20150318.jpg" alt="云南之旅"></p>
 ]]></content>
     <summary type="html">
@@ -125,7 +144,7 @@
     <link href="http://zyi.tw/2014/11/20/git-branch/"/>
     <id>http://zyi.tw/2014/11/20/git-branch/</id>
     <published>2014-11-20T10:26:48.000Z</published>
-    <updated>2015-12-03T03:55:28.768Z</updated>
+    <updated>2016-01-05T13:27:04.204Z</updated>
     <content type="html"><![CDATA[<h3 id="查看本地分支">查看本地分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* hexo</span><br><span class="line">  master</span><br></pre></td></tr></table></figure>
 <h3 id="查看本地和远程分支">查看本地和远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch <span class="operator">-a</span></span><br><span class="line">* hexo</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/hexo</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure>
 <h3 id="创建本地分支_test">创建本地分支 test</h3><a id="more"></a>
@@ -157,7 +176,7 @@
     <link href="http://zyi.tw/2014/09/29/vim-command/"/>
     <id>http://zyi.tw/2014/09/29/vim-command/</id>
     <published>2014-09-29T05:44:31.000Z</published>
-    <updated>2015-12-02T11:22:53.182Z</updated>
+    <updated>2016-01-05T13:27:04.633Z</updated>
     <content type="html"><![CDATA[<h3 id="命令历史">命令历史</h3><p>以 : 和 / 开头的命令都有历史纪录，可以首先键入 : 或 / 然后按上下箭头来选择某个历史命令。</p>
 <h3 id="启动_vim">启动 vim</h3><p>在命令行窗口中输入以下命令即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim    <span class="comment"># 直接启动 vim</span></span><br><span class="line">vim filename    <span class="comment"># 打开 vim 并创建名为 filename 的文件</span></span><br></pre></td></tr></table></figure>
@@ -225,7 +244,7 @@
     <link href="http://zyi.tw/2014/09/19/json-traversal/"/>
     <id>http://zyi.tw/2014/09/19/json-traversal/</id>
     <published>2014-09-19T11:06:11.000Z</published>
-    <updated>2015-12-02T11:22:53.181Z</updated>
+    <updated>2016-01-05T13:27:04.366Z</updated>
     <content type="html"><![CDATA[<h3 id="grep">grep</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> filterArray = $.grep( array, <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">5</span>;   <span class="comment">// 筛选出大于 5 的</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; filterArray.length; i++ ) &#123;</span><br><span class="line">    alert( filterArray[i] );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( key <span class="keyword">in</span> filterArray ) &#123;</span><br><span class="line">    alert( filterArray[key] );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="each">each</h3><a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> anObject = &#123;one : <span class="number">1</span>, two : <span class="number">2</span>, three : <span class="number">3</span>&#125;;    <span class="comment">// 对 json 数组 each</span></span><br><span class="line">$.each( anObject, <span class="function"><span class="keyword">function</span>(<span class="params"> name, value </span>) </span>&#123;</span><br><span class="line">    alert( name );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> anArray = [<span class="string">'one'</span>, <span class="string">'two'</span>, <span class="string">'three'</span>];</span><br><span class="line">$.each (anArray, <span class="function"><span class="keyword">function</span>(<span class="params"> n, value </span>) </span>&#123;</span><br><span class="line">    alert( n );</span><br><span class="line">    alert( value );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -253,7 +272,7 @@
     <link href="http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/"/>
     <id>http://zyi.tw/2014/04/03/text-overflow-ellipsis-in-table/</id>
     <published>2014-04-03T02:53:17.000Z</published>
-    <updated>2016-01-05T09:01:24.947Z</updated>
+    <updated>2016-01-05T13:27:04.367Z</updated>
     <content type="html"><![CDATA[<p>看过很多在 table 中使用 text-overflow: ellipsis 效果的，都是在表格内容上套一层 div 来实现，其实不用那么麻烦，只需为 table 增加一个 table-layout: fixed 样式就可以了。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">table</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">table-layout</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">td</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;    <span class="comment">/* 可以是固定宽度，也可以是百分比 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">text-overflow</span>:<span class="value"> ellipsis</span></span>;    <span class="comment">/* 也可以是 clip */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>;    <span class="comment">/* 强制不换行 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;    <span class="comment">/* text-overflow 生效的必要条件 */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="关于_table-layout_属性">关于 table-layout 属性</h2><a id="more"></a>
@@ -283,7 +302,7 @@
     <link href="http://zyi.tw/2014/03/17/hello-hexo/"/>
     <id>http://zyi.tw/2014/03/17/hello-hexo/</id>
     <published>2014-03-17T08:16:22.000Z</published>
-    <updated>2015-11-27T08:07:50.159Z</updated>
+    <updated>2016-01-05T13:27:04.247Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> ! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
