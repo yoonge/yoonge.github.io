@@ -66,7 +66,7 @@ $ git push origin gitcafe-pages
 
 ``` bash
 # Deployment
-## Docs: http://hexo.io/docs/deployment.html
+# Docs: http://hexo.io/docs/deployment.html
 deploy:
     type: git
     repository: https://github.com/yoonge/yoonge.github.io.git
@@ -76,21 +76,21 @@ deploy:
 那么每次博客有更新的时候，只需要在你本地 hexo 博客目录下执行：
 
 ``` bash
-$ hexo d -g    // 确保 .deploy_git 目录当前处于 master 分支
+$ hexo d -g    # 确保 .deploy_git 目录当前处于 master 分支
 ```
 
 就可以直接将更新提交到 github。然后进入该目录下的 .deploy_git 目录，执行以下命令：
 
 ``` bash
-$ cd .deploy_git    // 进入 .deploy_git 目录
+$ cd .deploy_git    # 进入 .deploy_git 目录
 
-$ git checkout gitcafe-pages    // 切换到 gitcafe-pages 分支
+$ git checkout gitcafe-pages    # 切换到 gitcafe-pages 分支
 
-$ git merge master    // 将 master 分支合并到当前所在的 gitcafe-pages 分支
+$ git merge master    # 将 master 分支合并到当前所在的 gitcafe-pages 分支
 
-$ git push origin gitcafe-pages    // 将 gitcafe-pages 分支提交到 gitcafe 远程仓库
+$ git push origin gitcafe-pages    # 将 gitcafe-pages 分支提交到 gitcafe 远程仓库
 
-$ git checkout master // 完事儿切换回 master 分支，确保博客下次更新时 .deploy_git 目录处于 master 分支    
+$ git checkout master    # 完事儿切换回 master 分支，确保博客下次更新时 .deploy_git 目录处于 master 分支    
 ```
 
 这样就实现了 gitcafe 与 github 博客同步更新。当然，如果觉得每次提交需要执行这么多命令，可以写个复合命令别名添加到 .bashrc 文件：
