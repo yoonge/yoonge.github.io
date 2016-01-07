@@ -2006,3 +2006,39 @@ body {
 .footer-inner {
   text-align: left;
 }
+.post-body .highlight {
+  padding-right: 0;
+}
+.post-body pre {
+  padding-right: 20px;
+}
+.post-body .highlight .gutter pre {
+  padding-right: 15px;
+}
+@media (max-width: 767px) {
+  .posts-expand .post-comments-count {
+    display: inline-block;
+  }
+  .post-body .highlight {
+    white-space: pre-wrap;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+  }
+  .post-body pre {
+    white-space: pre-wrap;
+    margin: 0 0 0 0;
+    padding-right: 15px;
+  }
+  .highlight td.gutter {
+    width: 0;
+  }
+  .highlight td.gutter pre {
+    display: none;
+  }
+  .page-post-detail .comments {
+    padding: 0 20px;
+  }
+  .footer-inner {
+    padding: 0 20px;
+  }
+}
