@@ -4,7 +4,7 @@
   <subtitle><![CDATA[时光静好，与君语；细水流年，与君同；繁华落尽，与君老。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zyi.tw/"/>
-  <updated>2016-01-06T08:03:57.560Z</updated>
+  <updated>2016-01-07T04:27:14.526Z</updated>
   <id>http://zyi.tw/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/"/>
     <id>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</id>
     <published>2015-12-24T09:04:53.000Z</published>
-    <updated>2016-01-06T08:03:57.560Z</updated>
+    <updated>2016-01-07T04:27:14.526Z</updated>
     <content type="html"><![CDATA[<p>由于国内网络原因，托管在 github 上的 hexo 博客访问速度很慢，有时甚至打不开。于是考虑将博客同步托管到 gitcafe，然后默认线路指向 gitcafe，国外线路指向 github，这样既可以解决国内访问慢的问题，同时 github 上的备份也算是个保障 —— 毕竟人家已经相当成熟。<br>那么，基于 github 上已经搭建好的 hexo 博客，开始吧：</p>
 <h3 id="注册_GitCafe">注册 GitCafe</h3><p>首先，必须注意 git 全局变量中的 user.name 和 user.email 在 github 和 gitcafe 两个网站的注册信息必须是一致的。在 github 上搭建 hexo 博客的时候已经设置过 user.name 和 user.email，可以使用以下命令查看：</p>
 <a id="more"></a>
@@ -32,11 +32,11 @@
 <p>然后添加 gitcafe 的远程仓库，并 push 到该仓库：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin <span class="string">'git@gitcafe.com:yoonge/yoonge.git'</span></span><br><span class="line"></span><br><span class="line">$ git push origin gitcafe-pages</span><br></pre></td></tr></table></figure>
 <h3 id="同步更新博客到_Github_和_GitCafe">同步更新博客到 Github 和 GitCafe</h3><p>同样在 github 上搭建 hexo 博客的时候已经设置过 _config.yml：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repository: https://github.com/yoonge/yoonge.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment"># Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repository: https://github.com/yoonge/yoonge.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 <p>那么每次博客有更新的时候，只需要在你本地 hexo 博客目录下执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g    // 确保 .deploy_git 目录当前处于 master 分支</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g    <span class="comment"># 确保 .deploy_git 目录当前处于 master 分支</span></span><br></pre></td></tr></table></figure>
 <p>就可以直接将更新提交到 github。然后进入该目录下的 .deploy_git 目录，执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> .deploy_git    // 进入 .deploy_git 目录</span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages    // 切换到 gitcafe-pages 分支</span><br><span class="line"></span><br><span class="line">$ git merge master    // 将 master 分支合并到当前所在的 gitcafe-pages 分支</span><br><span class="line"></span><br><span class="line">$ git push origin gitcafe-pages    // 将 gitcafe-pages 分支提交到 gitcafe 远程仓库</span><br><span class="line"></span><br><span class="line">$ git checkout master // 完事儿切换回 master 分支，确保博客下次更新时 .deploy_git 目录处于 master 分支</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> .deploy_git    <span class="comment"># 进入 .deploy_git 目录</span></span><br><span class="line"></span><br><span class="line">$ git checkout gitcafe-pages    <span class="comment"># 切换到 gitcafe-pages 分支</span></span><br><span class="line"></span><br><span class="line">$ git merge master    <span class="comment"># 将 master 分支合并到当前所在的 gitcafe-pages 分支</span></span><br><span class="line"></span><br><span class="line">$ git push origin gitcafe-pages    <span class="comment"># 将 gitcafe-pages 分支提交到 gitcafe 远程仓库</span></span><br><span class="line"></span><br><span class="line">$ git checkout master    <span class="comment"># 完事儿切换回 master 分支，确保博客下次更新时 .deploy_git 目录处于 master 分支</span></span><br></pre></td></tr></table></figure>
 <p>这样就实现了 gitcafe 与 github 博客同步更新。当然，如果觉得每次提交需要执行这么多命令，可以写个复合命令别名添加到 .bashrc 文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hexoall = <span class="string">'hexo d -g &amp;&amp; cd .deploy_git &amp;&amp; git checkout gitcafe-pages &amp;&amp; git merge master &amp;&amp; git push origin gitcafe-pages &amp;&amp; git checkout master &amp;&amp; cd ..'</span></span><br></pre></td></tr></table></figure>
 <p>这样以后博客有更新，只需要在你本地 hexo 博客目录下执行 hexoall 就可以了。</p>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</loc>
+    <lastmod>2016-01-07T04:27:14.526Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zyi.tw/2015/11/27/hello-baby/</loc>
     <lastmod>2016-01-07T04:06:53.184Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://zyi.tw/2014/12/25/add-sublime-text-to-right-click-menu/</loc>
     <lastmod>2016-01-06T08:12:45.503Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zyi.tw/2015/12/24/hexo-both-github-and-gitcafe/</loc>
-    <lastmod>2016-01-06T08:03:57.560Z</lastmod>
   </url>
   
   <url>
