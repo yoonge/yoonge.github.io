@@ -207,7 +207,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: true
   user_id: 11145759
-  admin_nickname: Yoonge
+  admin_nickname: admin
 
 
 # Facebook SDK Support.
